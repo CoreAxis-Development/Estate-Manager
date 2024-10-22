@@ -1,0 +1,32 @@
+    {% include 'Base/header.html' %}
+    {% include 'Base/navbar.html' %}
+    
+    <div class="main-body">
+
+        <div class="main-body-left">
+            <h1> Task Checklists</h1>
+            <ul class="main-body-left-ul">
+                <li class = "sub-list-parent">  Sublist Example <ul class = "sub-list-child"><li>a</li><li>b</li><li>c</li></ul></li>
+                <li class = "sub-list-parent"><a href="#news">Funeral</a></li>
+                <li class = "sub-list-parent"><a href="#contact">Deal with Lawyer</a></li>
+                <li class = "sub-list-parent"><a href="#about">Additional info</a></li>
+              </ul>
+        </div>
+        <div class="main-body-right">
+            
+            <!-- <div class="bar-outer">
+                <div class="bar-inner">25%</div>
+            </div> -->
+    <table>
+    <tr><th>Status</th><th>Task</th><th>Start Date</th><th>End Date</th><th>Assited By</th><th>Category</th><th>Deatil View</th><th>Update Status</th></tr>
+    {% for item in items %}
+    <tr><td>{{item.status}}</td><td>{{item.item.title}}</td><td>{{item.item.start_date}}</td><td>{{item.item.end_date}}</td><td>{{item.item.assisted_by}}</td><td>{{item.item.category}}</td><td><a href="{% url 'single_checlist_item_status_view' item.item.id %}">Deatil View</a></td><td><a href="">Update Status</a></td></tr>
+        {% endfor %}
+</table>
+          
+    </div>
+    
+    
+        </div>
+    
+    {% include 'Base/footer.html' %}

@@ -1,0 +1,28 @@
+{% include 'Base/header.html' %}
+{% include 'Base/navbar.html' %}
+
+<div class="main-body">
+
+    <div class="main-body-left">
+        <h1> Task Checklists</h1>
+        <ul class="main-body-left-ul">
+            <li class = "sub-list-parent">  Sublist Example <ul class = "sub-list-child"><li>a</li><li>b</li><li>c</li></ul></li>
+            <li class = "sub-list-parent"><a href="#news">Funeral</a></li>
+            <li class = "sub-list-parent"><a href="#contact">Deal with Lawyer</a></li>
+            <li class = "sub-list-parent"><a href="#about">Additional info</a></li>
+          </ul>
+    </div>
+    <div class="main-body-right">
+        
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name = "user_field">
+    <input type="submit">
+</form>
+      
+</div>
+
+
+    </div>
+
+{% include 'Base/footer.html' %}

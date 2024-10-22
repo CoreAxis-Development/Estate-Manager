@@ -1,0 +1,26 @@
+{% include 'Base/header.html' %}
+{% include 'Base/navbar.html' %}
+
+<div class="progress-body">
+
+    <div class="navigation">
+   
+        <h1>{{item.item.title}}</h1>
+    </div>
+
+    <div class="content">
+  
+{{item.item.notes}}
+    
+    </div>
+    <div class="nav-controls">
+        <a href="#" class="previous round">&#8249;</a>
+<a href="progress2.html" class="next round">&#8250;</a>
+    </div>
+
+   
+    
+
+</div>
+
+{% include 'Base/footer.html' %}
