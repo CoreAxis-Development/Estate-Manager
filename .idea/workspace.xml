@@ -5,9 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fab0b99-cd81-4ae8-b4af-d94a34d57741" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.local" beforeDir="false" afterPath="$PROJECT_DIR$/.env.local" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/EstateManagement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EstateManagement.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckList/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckList/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckList/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/migrations/0002_checklistitemstatus.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckList/migrations/0002_checklistitemstatus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/migrations/0003_rename_titles_checklistitem_title_and_more.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckList/migrations/0003_rename_titles_checklistitem_title_and_more.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/migrations/0004_alter_checklistitem_cardinality.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckList/migrations/0004_alter_checklistitem_cardinality.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/migrations/0005_checklistitem_titles.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckList/migrations/0005_checklistitem_titles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/migrations/0006_remove_checklistitem_titles.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckList/migrations/0006_remove_checklistitem_titles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/migrations/0007_alter_checklistitemstatus_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckList/migrations/0007_alter_checklistitemstatus_status.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckList/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckList/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckList/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckList/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Estate/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Estate/asgi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Estate/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Estate/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Estate/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Estate/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Estate/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Estate/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Base/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Base/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Base/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Base/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Base/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Base/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CheckList/create_status_items_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/CheckList/create_status_items_view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CheckList/item_list_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/CheckList/item_list_view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CheckList/item_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/CheckList/item_view.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,28 +53,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Django Server.EstateManagement.executor&quot;: &quot;Run&quot;,
-    &quot;Python.manage.py migrate.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Careers/CoreAxis_Development/EstateExec/EstateManagement&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Django Server.EstateManagement.executor": "Run",
+    "Python.manage.py migrate.executor": "Run",
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/Careers/CoreAxis_Development/EstateExec/EstateManagement",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Django Server.EstateManagement">
     <configuration name="manage.py migrate" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="EstateManagement" />
@@ -93,6 +122,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Estate.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -138,6 +168,7 @@
       <workItem from="1729967816247" duration="355000" />
       <workItem from="1729977691635" duration="777000" />
       <workItem from="1730041104734" duration="138000" />
+      <workItem from="1730042034690" duration="512000" />
     </task>
     <servers />
   </component>
