@@ -30,6 +30,7 @@ INSTALLED_APPS = [
 
     # Custom Apps
     'CheckList',
+    'AssetManager',
 ]
 
 MIDDLEWARE = [
