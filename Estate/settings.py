@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     # Custom Apps
     'CheckList',
     'AssetManager',
+    'UserManagement',
 ]
 
 MIDDLEWARE = [
@@ -77,7 +78,7 @@ DATABASES = {
     }
 }
 
-AUTH_USER_MODEL = 'CheckList.CustomUser'
+AUTH_USER_MODEL = 'UserManagement.CustomUser'
 
 AUTH_PASSWORD_VALIDATORS = [
     {

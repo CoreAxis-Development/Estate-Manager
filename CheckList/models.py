@@ -1,8 +1,9 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from UserManagement.models import CustomUser  # Import CustomUser
 
 class CheckListCategory(models.Model):
     title = models.CharField(max_length=100)
+    items = models.ManyToManyField('CheckListItem', related_name='categories')
 
     def __str__(self) -> str:
         return self.title
@@ -15,6 +16,11 @@ class CheckListItem(models.Model):
     assisted_by = models.CharField(max_length=70)
     catalogue_data = models.ForeignKey('CatalogueData', on_delete=models.CASCADE)
     cardinality = models.IntegerField(unique=True)
+    users = models.ManyToManyField(
+        CustomUser,  # Use the imported model directly
+        through='CheckListItemStatus',
+        related_name='checklist_items'
+    )
 
     def __str__(self) -> str:
         return self.title
@@ -23,35 +29,23 @@ class CheckListItemStatus(models.Model):
     class StatusChoices(models.TextChoices):
         PENDING = 'PENDING', 'PENDING'
         DONE = 'DONE', 'DONE'
-    status = models.CharField(max_length=50, choices=StatusChoices.choices, default=StatusChoices.PENDING)
-    user = models.CharField(max_length=40, null=True)
-    item = models.ForeignKey(CheckListItem, on_delete=models.CASCADE, null=True)
+
+    status = models.CharField(
+        max_length=50,
+        choices=StatusChoices.choices,
+        default=StatusChoices.PENDING
+    )
+    user = models.ForeignKey(
+        CustomUser,  # Use the imported model directly
+        on_delete=models.CASCADE
+    )
+    item = models.ForeignKey(
+        CheckListItem,
+        on_delete=models.CASCADE
+    )
 
     def __str__(self) -> str:
-        return str(self.user) + " - " + str(self.item.title)
-
-class DocType(models.Model):
-    name = models.CharField(max_length=255)
-
-    def __str__(self):
-        return self.name
-
-class Doc(models.Model):
-    doc_type = models.ForeignKey(DocType, on_delete=models.CASCADE)
-    url = models.CharField(max_length=255)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-class CustomUser(AbstractUser):
-    class RoleChoices(models.TextChoices):
-        ADMIN = 'ADMIN', 'Admin'
-        EXECUTOR = 'EXECUTOR', 'Executor'
-        CLIENT = 'CLIENT', 'Client'
-        GUEST = 'GUEST', 'Guest'
-    role = models.CharField(max_length=10, choices=RoleChoices.choices, default=RoleChoices.GUEST)
-
-    def __str__(self):
-        return self.username
+        return f"{self.user} - {self.item.title}"
 
 class CatalogueType(models.Model):
     name = models.CharField(max_length=100)
