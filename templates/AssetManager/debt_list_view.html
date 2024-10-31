@@ -1,0 +1,29 @@
+{% include 'Base/header.html' %}
+{% include 'Base/navbar.html' %}
+<div class="main-body">
+
+    <div class="main-body-left">
+        {% include 'AssetManager/left_menu.html' %}
+      </div>
+    <div class="main-body-right">
+        
+<table>
+<tr><th>Debt type</th><th>Debt Title</th><th>Current value</th></tr>
+
+{% for debt in debts %}
+
+<tr><td>{{debt.type}}</td><td>{{debt.title}}</td><td>{{debt.value}}</td></tr>
+
+{% endfor %}
+</table>
+
+<div>
+
+    <a href="" class="button"> Add</a>
+</div>
+      
+</div>
+
+
+    </div>
+    {% include 'Base/footer.html' %}
