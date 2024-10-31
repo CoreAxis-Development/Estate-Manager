@@ -37,3 +37,16 @@ class Debt(models.Model):
 
     def __str__(self) -> str:
         return self.title
+
+
+class DocType(models.Model):
+    name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.name
+
+class Doc(models.Model):
+    doc_type = models.ForeignKey(DocType, on_delete=models.CASCADE)
+    url = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
