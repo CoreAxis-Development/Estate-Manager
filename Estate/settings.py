@@ -32,7 +32,10 @@ INSTALLED_APPS = [
     'CheckList',
     'AssetManager',
     'UserManagement',
+    'django_otp',
+    'django_otp.plugins.otp_totp',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -119,3 +122,17 @@ STATICFILES_DIRS = (
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# settings.py additions
+CSRF_COOKIE_SAMESITE = 'Lax'
+SESSION_COOKIE_SAMESITE = 'Lax'
+CSRF_COOKIE_HTTPONLY = False
+SESSION_COOKIE_HTTPONLY = True
+
+# Add these settings for better security in production
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', 'http://127.0.0.1:8000']
+
+# For the success URL after login
+LOGIN_REDIRECT_URL = '/'  # Change this to your desired landing page
+LOGIN_URL = 'login'
+
