@@ -6,5 +6,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('CheckList.urls')),
     path('', include('AssetManager.urls')),
-    path('', include('UserManagement.urls')),  # Add this line
+    path('', include('UserManagement.urls')),
 ]
