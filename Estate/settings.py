@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'CheckList',
     'AssetManager',
     'UserManagement',
+    'ContactManager'
 ]
 
 MIDDLEWARE = [
