@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'UserManagement',
     'django_otp',
     'django_otp.plugins.otp_totp',
+    'ContactManager'
 ]
 
 
