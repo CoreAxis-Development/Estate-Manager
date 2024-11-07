@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'ContactManager'
 ]
 
+AUTH_USER_MODEL = 'UserManagement.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -1,6 +1,5 @@
 from django.db import models
-from UserManagement.models import CustomUser  # Import CustomUser
-
+from UserManagement.models import CustomUser  # Import 
 class CheckListCategory(models.Model):
     title = models.CharField(max_length=100)
     items = models.ManyToManyField('CheckListItem', related_name='categories')
