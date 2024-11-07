@@ -11,4 +11,5 @@ media
 !.vscode/extensions.json 
 .history
 *.local
-.idea
+.idea/
+.env
