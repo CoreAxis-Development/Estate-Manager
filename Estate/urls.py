@@ -7,5 +7,5 @@ urlpatterns = [
     path('', include('CheckList.urls')),
     path('', include('AssetManager.urls')),
     path('', include('UserManagement.urls')),
-    path('', include('ContactManager.urls')),  # Add this line
+    path('', include('ContactManager.urls')), 
 ]
