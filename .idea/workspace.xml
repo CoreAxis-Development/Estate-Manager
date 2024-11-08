@@ -5,19 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="576f3c42-612c-4010-bc47-374575ead7f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CheckList/management/commands/populate_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserManagement/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env.local" beforeDir="false" afterPath="$PROJECT_DIR$/.env.local" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/79bb50ef-eda7-4ae8-9313-c4031c64774d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/79bb50ef-eda7-4ae8-9313-c4031c64774d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetManager/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssetManager/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CheckList/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckList/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CheckList/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckList/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CheckList/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckList/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Estate/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Estate/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Estate/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Estate/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +52,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
-    "git-widget-placeholder": "feature/asset-management",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "D:/Careers/CoreAxis_Development/EstateExec/EstateManagement",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -116,14 +112,30 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DB_HOST" value="localhost" />
+        <env name="DB_NAME" value="estatemanagement" />
+        <env name="DB_PASSWORD" value="1512" />
+        <env name="DB_PORT" value="3306" />
+        <env name="DB_USER" value="Keagan" />
         <env name="DJANGO_SETTINGS_MODULE" value="Estate.settings" />
+        <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </EXTENSION>
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8000" />
       <option name="host" value="localhost" />
@@ -151,7 +163,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3fab0b99-cd81-4ae8-b4af-d94a34d57741" name="Changes" comment="" />
+      <changelist id="576f3c42-612c-4010-bc47-374575ead7f1" name="Changes" comment="" />
       <created>1729630745709</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -164,6 +176,7 @@
       <workItem from="1729977691635" duration="777000" />
       <workItem from="1730041104734" duration="138000" />
       <workItem from="1730042034690" duration="512000" />
+      <workItem from="1731077935650" duration="391000" />
     </task>
     <servers />
   </component>
