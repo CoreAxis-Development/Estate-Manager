@@ -14,6 +14,7 @@ django-otp = "^1.5.4"
 sqlparse = "^0.5.1"
 asgiref = "^3.8.1"
 tzdata = "^2024.2"
+faker = "^30.8.2"
 
 
 [build-system]
