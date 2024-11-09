@@ -1,0 +1,89 @@
+# Copyright DWJ 2024.
+# Distributed under the Boost Software License, Version 1.0.
+# https://www.boost.org/LICENSE_1_0.txt
+
+services:
+  django:
+    build: .
+    pull_policy: build
+    ports:
+      - "${DJANGO_PORT:-8000}:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.schedule-optimizer.rule=Host(`scheduleoptimizer.uk.to`)"
+      - "traefik.http.routers.schedule-optimizer.entrypoints=websecure"
+      - "traefik.http.routers.schedule-optimizer.tls.certresolver=myresolver"
+      - "traefik.http.services.schedule-optimizer.loadbalancer.server.port=8000"
+
+      - "traefik.http.routers.schedule-optimizer-http.rule=Host(`scheduleoptimizer.uk.to`)"
+      - "traefik.http.routers.schedule-optimizer-http.entrypoints=web"
+      - "traefik.http.routers.schedule-optimizer-http.middlewares=https-redirect"
+
+      - "traefik.http.middlewares.https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.https-redirect.redirectscheme.permanent=true"
+    environment:
+      - DJANGO_SECRET_KEY=$DJANGO_SECRET_KEY
+      - DJANGO_DEBUG=$DJANGO_DEBUG
+      - DJANGO_ALLOWED_HOSTS=$DJANGO_ALLOWED_HOSTS
+      - DJANGO_CSRF_TRUSTED_ORIGINS=$DJANGO_CSRF_TRUSTED_ORIGINS
+      - DB_NAME=$DB_NAME
+      - DB_USER=$DB_USER
+      - DB_PASSWORD=$DB_PASSWORD
+      - DB_HOST=$DB_HOST
+      - DB_PORT=$DB_PORT
+    volumes:
+      - ./data/:/data/
+    networks:
+      - traefik
+    healthcheck:
+      test: ["CMD-SHELL", "curl --fail http://localhost:8000/ || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+
+  db:
+    image: yobasystems/alpine-mariadb
+    command:
+      [
+        "--character-set-server=utf8mb4",
+        "--collation-server=utf8mb4_unicode_520_ci",
+      ]
+    environment:
+      MYSQL_CHARSET: utf8mb4
+      MYSQL_COLLATION: utf8mb4_unicode_520_ci
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    expose:
+      - "3306"
+    volumes:
+      - mysql:/var/lib/mysql
+    networks:
+      - traefik
+    restart: unless-stopped
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "mysqladmin",
+          "ping",
+          "-h",
+          "127.0.0.1",
+          "-u",
+          "root",
+          "-p${DB_ROOT_PASSWORD}",
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  mysql:
+
+networks:
+  traefik:
+    external: true
