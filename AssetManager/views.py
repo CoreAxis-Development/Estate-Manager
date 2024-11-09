@@ -13,7 +13,7 @@ def asset_list_view(request , user):
             asset = form.save(commit=False)
             asset.user = user
             asset.save()
-            return redirect('asset_list_view')
+            return redirect('asset_list_view' , user)
     context['assets'] = assets
     context['user'] = user
     context['form'] =  AddAssetForm()
@@ -30,9 +30,27 @@ def debt_list_view(request , user):
             debt = form.save(commit=False)
             debt.user = user
             debt.save()
-            return redirect('debt_list_view')
+            return redirect('debt_list_view' , user)
     context['debts'] = debts
     context['user'] = user
     context['form'] =  AddDebtForm()
 
     return render(request , "AssetManager/debt_list_view.html", context=context)
+
+
+def collective_list_view(request , user):
+    context = {}
+    assets = Asset.objects.filter(user = user)
+    debts = Debt.objects.filter(user = user)
+    context['assets'] = assets
+    context['debts'] = debts
+
+    total = 0
+    for asset in assets:
+        total += asset.value
+    for debt in debts:
+        total -= debt.value
+    context['total'] = total
+    context['user'] = user
+
+    return render(request,"AssetManager/collective_list_view.html",context = context)

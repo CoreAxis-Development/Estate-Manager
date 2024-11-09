@@ -12,6 +12,13 @@
     --label-grey : #e8eeee;
   }
 
+.red-font{
+    color: red;
+}
+
+.green-font{
+    color: green;
+}
 html, body {
     box-sizing: border-box;
     margin: 0;
