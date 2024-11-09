@@ -1,0 +1,31 @@
+{% include 'Base/header.html' %}
+{% include 'Base/navbar.html' %}
+<div class="main-body">
+
+    <div class="main-body-left">
+      {% include 'AssetManager/left_menu.html' %}
+    </div>
+    <div class="main-body-right">
+        
+<table>
+<tr><th>Type</th><th>Title</th><th>Current value</th></tr>
+
+{% for asset in assets %}
+
+<tr class="green-font"><td>{{asset.type}}</td><td>{{asset.title}}</td><td>{{asset.value}}</td></tr>
+
+{% endfor %}
+{% for debt in debts %}
+
+<tr class="red-font"><td>{{debt.type}}</td><td>{{debt.title}}</td><td>{{debt.value}}</td></tr>
+
+{% endfor %}
+<tr> <td></td>  <td class="req">Net Worth</td> <td>{{total}}</td></tr>
+</table>
+
+
+</div>
+
+
+    </div>
+    {% include 'Base/footer.html' %}
