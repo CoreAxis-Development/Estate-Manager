@@ -22,7 +22,7 @@ class Asset(models.Model):
     type = models.ForeignKey(AssetType , on_delete= models.CASCADE)
     user = models.CharField(max_length=50)
     value = models.FloatField()
-    description = models.TextField()
+    description = models.TextField(null=True , blank=True,max_length=500)
 
     def __str__(self) -> str:
         return self.title
@@ -33,7 +33,7 @@ class Debt(models.Model):
     type = models.ForeignKey(DebtType , on_delete= models.CASCADE)
     user = models.CharField(max_length=50)
     value = models.FloatField()
-    description = models.TextField(null=True , blank=True)
+    description = models.TextField(null=True , blank=True , max_length=500)
 
     def __str__(self) -> str:
         return self.title
