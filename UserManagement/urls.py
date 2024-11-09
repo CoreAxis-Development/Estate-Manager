@@ -1,16 +1,20 @@
-
 # UserManagement/urls.py
 from django.urls import path
-from .views import user_list_view, login_view, logout_view, register_view, home_view
+from .views import (
+    user_list_view, login_view, logout_view, register_view, home_view,
+    two_factor_authenticate, setup_2fa, user_list_view, login_view, logout_view, register_view, home_view
+)
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    path('', home_view, name='home'),  # Add this line for the home page
+    path('', home_view, name='home'),
     path('users/', user_list_view, name='user_list_view'),
     path('login/', login_view, name='login'),
     path('logout/', logout_view, name='logout'),
     path('register/', register_view, name='register'),
-    # Password reset URLs remain the same
+    path('two-factor-authenticate/', two_factor_authenticate, name='two_factor_authenticate'),
+    path('setup-2fa/', setup_2fa, name='setup_2fa'),
+     # Password reset URLs remain the same
     path('password_reset/', auth_views.PasswordResetView.as_view(
         template_name='UserManagement/password_reset.html'), 
         name='password_reset'),
