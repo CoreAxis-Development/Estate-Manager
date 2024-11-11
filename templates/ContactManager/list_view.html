@@ -7,19 +7,17 @@
 
     <div class="main-body-right">
         <a class="print-btn" ><i class="fa fa-print"></i> Print</a>
-        <div class="table-title-ele">Executors</div> 
+
+    {% for contact in contacts %}
+        <div class="table-title-ele">{{contact.title}}</div> 
         <table>
-            <tr><th></th> <th>First Name</th> <th>Last Name</th> <th>Realtionship</th> <th>Company</th><th>Phone</th> <th>Email</th></tr>
-           <tr> <td><i class="fa fa-trash"></i></td> <td>Dummy Data</td> <td>Dummy Data</td> <td>Dummy Data</td> <td>Dummy Data</td> <td>Dummy Data</td> <td>Dummy Data</td></tr>
-           <tr> <td><i class="fa fa-trash"></i></td> <td>Dummy Data</td> <td>Dummy Data</td> <td>Dummy Data</td> <td>Dummy Data</td> <td>Dummy Data</td> <td>Dummy Data</td></tr>
+            <tr> <th>First Name</th> <th>Last Name</th>  <th>Company</th><th>Phone</th> <th>Email</th></tr>
+            {% for item in contact.items %}
+           <tr> <td>{{item.first_name}}</td> <td>{{item.last_name}}</td><td>{{item.company_name}}</td> <td>{{item.contact}}</td> <td>{{item.email}}</td></tr>
+            {% endfor %}
         </table>
 
-        <div class="table-title-ele">Beneficiaries</div> 
-        <table>
-            <tr><th></th> <th>First Name</th> <th>Last Name</th> <th>Realtionship</th> <th>Company</th><th>Phone</th> <th>Email</th></tr>
-           <tr> <td><i class="fa fa-trash"></i></td> <td>Dummy Data</td> <td>Dummy Data</td> <td>Dummy Data</td> <td>Dummy Data</td> <td>Dummy Data</td> <td>Dummy Data</td></tr>
-           <!-- <tr> <td><i class="fa fa-trash"></i></td> <td>Dummy Data</td> <td>Dummy Data</td> <td>Dummy Data</td> <td>Dummy Data</td> <td>Dummy Data</td> <td>Dummy Data</td></tr> -->
-        </table>
+       {% endfor %}
         
     </div>
 </div>

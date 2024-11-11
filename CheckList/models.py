@@ -1,5 +1,7 @@
 from django.db import models
-from UserManagement.models import CustomUser  # Import 
+from UserManagement.models import CustomUser  # Import
+
+
 class CheckListCategory(models.Model):
     title = models.CharField(max_length=100)
     items = models.ManyToManyField('CheckListItem', related_name='categories')
@@ -13,13 +15,13 @@ class CheckListItem(models.Model):
     start_date = models.DateField()
     end_date = models.DateField()
     assisted_by = models.CharField(max_length=70)
-    catalogue_data = models.ForeignKey('CatalogueData', on_delete=models.CASCADE)
+    #catalogue_data = models.ForeignKey('CatalogueData', on_delete=models.CASCADE)
     cardinality = models.IntegerField(unique=True)
-    users = models.ManyToManyField(
-        CustomUser,  # Use the imported model directly
-        through='CheckListItemStatus',
-        related_name='checklist_items'
-    )
+    # users = models.ManyToManyField(
+    #     CustomUser,  # Use the imported model directly
+    #     through='CheckListItemStatus',
+    #     related_name='checklist_items'
+    # )
 
     def __str__(self) -> str:
         return self.title
@@ -34,10 +36,10 @@ class CheckListItemStatus(models.Model):
         choices=StatusChoices.choices,
         default=StatusChoices.PENDING
     )
-    user = models.ForeignKey(
-        CustomUser,  # Use the imported model directly
-        on_delete=models.CASCADE
-    )
+    # user = models.ForeignKey(
+    #     CustomUser,  # Use the imported model directly
+    #     on_delete=models.CASCADE
+    # )
     item = models.ForeignKey(
         CheckListItem,
         on_delete=models.CASCADE
@@ -46,23 +48,23 @@ class CheckListItemStatus(models.Model):
     def __str__(self) -> str:
         return f"{self.user} - {self.item.title}"
 
-class CatalogueType(models.Model):
-    name = models.CharField(max_length=100)
+# class CatalogueType(models.Model):
+#     name = models.CharField(max_length=100)
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name
 
-class CatalogueSubType(models.Model):
-    name = models.CharField(max_length=100)
-    catalogue_type = models.ForeignKey(CatalogueType, on_delete=models.CASCADE)
+# class CatalogueSubType(models.Model):
+#     name = models.CharField(max_length=100)
+#     catalogue_type = models.ForeignKey(CatalogueType, on_delete=models.CASCADE)
 
-    def __str__(self):
-        return f"{self.catalogue_type.name} - {self.name}"
+#     def __str__(self):
+#         return f"{self.catalogue_type.name} - {self.name}"
 
-class CatalogueData(models.Model):
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-    sub_type = models.ForeignKey(CatalogueSubType, on_delete=models.CASCADE)
-    data = models.TextField()
+# class CatalogueData(models.Model):
+#     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+#     sub_type = models.ForeignKey(CatalogueSubType, on_delete=models.CASCADE)
+#     data = models.TextField()
 
-    def __str__(self):
-        return f"{self.user.username} - {self.sub_type.name} - {self.data}"
+#     def __str__(self):
+#         return f"{self.user.username} - {self.sub_type.name} - {self.data}"
