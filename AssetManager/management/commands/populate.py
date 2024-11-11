@@ -6,6 +6,7 @@ class Command(BaseCommand):
     help = "Populating Database With Dummy Data"
 
     def handle(self,n= 10, *args, **kwargs ):
+        print("AssetManager Populating")
         fake = Faker()
         for i in range(n):
             temp_asset_type = AssetType.objects.create (
