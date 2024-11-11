@@ -15,14 +15,9 @@ class CheckListItem(models.Model):
     start_date = models.DateField()
     end_date = models.DateField()
     assisted_by = models.CharField(max_length=70)
-    #catalogue_data = models.ForeignKey('CatalogueData', on_delete=models.CASCADE)
+   
     cardinality = models.IntegerField(unique=True)
-    # users = models.ManyToManyField(
-    #     CustomUser,  # Use the imported model directly
-    #     through='CheckListItemStatus',
-    #     related_name='checklist_items'
-    # )
-
+   
     def __str__(self) -> str:
         return self.title
 
@@ -36,10 +31,7 @@ class CheckListItemStatus(models.Model):
         choices=StatusChoices.choices,
         default=StatusChoices.PENDING
     )
-    # user = models.ForeignKey(
-    #     CustomUser,  # Use the imported model directly
-    #     on_delete=models.CASCADE
-    # )
+    user = models.ForeignKey(CustomUser , on_delete= models.CASCADE)
     item = models.ForeignKey(
         CheckListItem,
         on_delete=models.CASCADE

@@ -1,11 +1,23 @@
 from django.shortcuts import render, redirect
 from .models import CheckListItemStatus, CheckListItem, CheckListCategory
+from .helper import is_allowed_user
+
 
 def single_checlist_item_status_view(request, pk):
     context = {}
     check_list_item = CheckListItemStatus.objects.get(id=pk)
-    context['item'] = check_list_item
-    return render(request, 'CheckList/item_view.html', context=context)
+    if is_allowed_user(request , check_list_item):
+        context['item'] = check_list_item
+        return render(request, 'CheckList/item_view.html', context=context)
+    else :
+        return redirect('unauth_error')
+
+
+def checklist_item_list_view_self(request):
+    context = {}
+    items = CheckListItemStatus.objects.filter(user=request.user)
+    context['items'] = items
+    return render(request, "CheckList/item_list_view.html", context=context)
 
 def checklist_item_list_view(request, user):
     context = {}

@@ -34,7 +34,8 @@ INSTALLED_APPS = [
     'UserManagement',
     'django_otp',
     'django_otp.plugins.otp_totp',
-    'ContactManager'
+    'ContactManager',
+    'Base'
 ]
 
 AUTH_USER_MODEL = 'UserManagement.CustomUser'

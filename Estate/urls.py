@@ -7,5 +7,6 @@ urlpatterns = [
     path('', include('CheckList.urls')),
     path('', include('AssetManager.urls')),
     path('', include('UserManagement.urls')),
-    path('', include('ContactManager.urls')), 
+    path('', include('ContactManager.urls')),
+    path('', include('Base.urls')), 
 ]
