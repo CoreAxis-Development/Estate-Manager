@@ -5,15 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="576f3c42-612c-4010-bc47-374575ead7f1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/AssetManager/migrations/0002_remove_doc_url_doc_file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/Lorem_ipsum.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/Lorem_ipsum_K1q6aH5.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/Lorem_ipsum_NNQKyYM.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/Lorem_ipsum_QTNGxP4.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/Lorem_ipsum_lFYkKtF.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/Lorem_ipsum_vO5pNhe.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/AssetManager/document_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/AssetManager/upload_doc.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env.local" beforeDir="false" afterPath="$PROJECT_DIR$/.env.local" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/79bb50ef-eda7-4ae8-9313-c4031c64774d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/79bb50ef-eda7-4ae8-9313-c4031c64774d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssetManager/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssetManager/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssetManager/management/commands/populate.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssetManager/management/commands/populate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssetManager/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssetManager/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssetManager/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssetManager/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssetManager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssetManager/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Estate/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Estate/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,31 +56,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.EstateManagement.executor": "Run",
-    "Python.manage.py migrate.executor": "Run",
-    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/Careers/CoreAxis_Development/EstateExec/EstateManagement",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.EstateManagement.executor&quot;: &quot;Run&quot;,
+    &quot;Python.manage.py migrate.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Careers/CoreAxis_Development/EstateExec/EstateManagement&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Django Server.EstateManagement">
     <configuration name="manage.py migrate" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="EstateManagement" />
@@ -116,9 +130,18 @@
         <env name="DB_NAME" value="estatemanagement" />
         <env name="DB_PASSWORD" value="1512" />
         <env name="DB_PORT" value="3306" />
+        <env name="DB_ROOT_PASSWORD" value="rootpassword1" />
         <env name="DB_USER" value="Keagan" />
+        <env name="DJANGO_ALLOWED_HOSTS" value="127.0.0.1,localhost" />
+        <env name="DJANGO_CSRF_TRUSTED_ORIGINS" value="http://localhost" />
+        <env name="DJANGO_DEBUG" value="True" />
+        <env name="DJANGO_PORT" value="8000" />
+        <env name="DJANGO_SECRET_KEY" value="your_secret_key" />
         <env name="DJANGO_SETTINGS_MODULE" value="Estate.settings" />
-        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="S3_ACCESS_KEY" value="AKIA2OAJTXJ7QW44TW74" />
+        <env name="S3_BUCKET_NAME" value="estate-manager" />
+        <env name="S3_REGION_NAME" value="eu-north-1" />
+        <env name="S3_SECRET_KEY" value="nqq0eSMUYlyLORbpaWI/CgHVSHNQ+PxiXB6kVH36" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="SDK_NAME" value="Python 3.12" />
@@ -177,6 +200,8 @@
       <workItem from="1730041104734" duration="138000" />
       <workItem from="1730042034690" duration="512000" />
       <workItem from="1731077935650" duration="391000" />
+      <workItem from="1731424997177" duration="489000" />
+      <workItem from="1731448477760" duration="1698000" />
     </task>
     <servers />
   </component>

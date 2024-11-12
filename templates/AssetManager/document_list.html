@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document List</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Document List</h1>
+        <ul class="list-group">
+            {% for doc in documents %}
+                <li class="list-group-item">
+                    {{ doc.doc_type.name }} -
+                    <a href="{{ doc.file.url }}">{{ doc.file.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

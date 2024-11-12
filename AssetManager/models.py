@@ -39,6 +39,7 @@ class Debt(models.Model):
         return self.title
 
 
+
 class DocType(models.Model):
     name = models.CharField(max_length=255)
 
@@ -47,6 +48,9 @@ class DocType(models.Model):
 
 class Doc(models.Model):
     doc_type = models.ForeignKey(DocType, on_delete=models.CASCADE)
-    url = models.CharField(max_length=255)
+    file = models.FileField(upload_to='documents/')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.file.name

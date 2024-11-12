@@ -1,7 +1,10 @@
 from django.shortcuts import render , redirect
-from .models import Asset , Debt
-from .forms import AddAssetForm , AddDebtForm
-# Create your views here.
+from .models import Asset , Debt, Doc
+from .forms import AddAssetForm , AddDebtForm, DocForm
+from django.shortcuts import render, redirect
+import logging
+
+logger = logging.getLogger(__name__)
 
 def asset_list_view(request , user):
     context = {}
@@ -20,6 +23,20 @@ def asset_list_view(request , user):
 
     return render(request , "AssetManager/asset_list_view.html", context=context)
 
+def document_list(request):
+    documents = Doc.objects.all()
+    return render(request, 'AssetManager/document_list.html', {'documents': documents})
+
+def upload_doc(request):
+    if request.method == 'POST':
+        form = DocForm(request.POST, request.FILES)
+        if form.is_valid():
+            doc = form.save()
+            logger.info(f"Document {doc.file.name} uploaded successfully to {doc.file.url}")
+            return redirect('document_list')
+    else:
+        form = DocForm()
+    return render(request, 'AssetManager/upload_doc.html', {'form': form})
 
 def debt_list_view(request , user):
     context = {}
