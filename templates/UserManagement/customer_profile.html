@@ -1,0 +1,22 @@
+{% include 'Base/header.html' %}
+{% include 'Base/navbar.html' %}
+<div class="main-body">
+
+    <div class="main-body-left">
+    
+    </div>
+    <div class="main-body-right">
+        <h1>{{user.username}}</h1>
+        <h1>{{user.email}}</h1>
+        
+        <a href="{% url 'asset_list_view' user.id %}">View Assests</a>
+         <a href="{% url 'checklist_item_list_view' user.id %}">View Check List</a>
+         <a href="{% url 'create_checklist_item_status_list' user.id %}">Create Check List</a>
+          <a href="{% url 'contact_list_view' user.id %}">View Contacts</a>
+
+   
+</div>
+
+
+    </div>
+    {% include 'Base/footer.html' %}

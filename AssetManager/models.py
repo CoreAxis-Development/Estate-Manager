@@ -1,4 +1,5 @@
 from django.db import models
+from UserManagement.models import CustomUser
 
 # Create your models here.
 class AssetType(models.Model):
@@ -20,7 +21,7 @@ class DebtType(models.Model):
 class Asset(models.Model):
     title = models.CharField(max_length=100)
     type = models.ForeignKey(AssetType , on_delete= models.CASCADE)
-    user = models.CharField(max_length=50)
+    user = models.ForeignKey(CustomUser , on_delete= models.CASCADE)
     value = models.FloatField()
     description = models.TextField(null=True , blank=True,max_length=500)
 
@@ -31,7 +32,7 @@ class Asset(models.Model):
 class Debt(models.Model):
     title = models.CharField(max_length=100)
     type = models.ForeignKey(DebtType , on_delete= models.CASCADE)
-    user = models.CharField(max_length=50)
+    user = models.ForeignKey(CustomUser , on_delete= models.CASCADE)
     value = models.FloatField()
     description = models.TextField(null=True , blank=True , max_length=500)
 

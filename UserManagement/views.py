@@ -98,3 +98,14 @@ def home_view(request):
     return render(request, 'UserManagement/home.html', {
         'user': request.user,
     })
+
+def users_list_view(request):
+    users = CustomUser.objects.filter(role = 'Customer' )
+    context = {'users' : users}
+    return render(request , 'UserManagement/user_list.html' , context)
+
+def customer_profile(request , pk):
+    user = CustomUser.objects.get(id = pk)
+    context = {'user': user}
+
+    return render(request , 'UserManagement/customer_profile.html' , context)

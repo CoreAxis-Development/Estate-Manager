@@ -1,0 +1,24 @@
+{% include 'Base/header.html' %}
+{% include 'Base/navbar.html' %}
+<div class="main-body">
+
+    <div class="main-body-left">
+    
+    </div>
+    <div class="main-body-right">
+        
+<table>
+<tr><th>Email</th><th>UserName</th> <th> View Profile</th></tr>
+
+{% for user in users %}
+
+<tr><td>{{user.email}}</td><td>{{user.username}}</td> <td><a href="{% url 'customer_profile' user.id %}"> View</a></td></tr>
+
+{% endfor %}
+</table>
+   
+</div>
+
+
+    </div>
+    {% include 'Base/footer.html' %}

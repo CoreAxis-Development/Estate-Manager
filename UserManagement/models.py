@@ -8,6 +8,7 @@ class CustomUser(AbstractUser):
         EXECUTOR = 'EXECUTOR', 'Executor'
         CLIENT = 'CLIENT', 'Client'
         GUEST = 'GUEST', 'Guest'
+        CUSTOMER = 'CUSTOMER' , 'Customer'
     role = models.CharField(max_length=10, choices=RoleChoices.choices, default=RoleChoices.GUEST)
 
     def __str__(self):

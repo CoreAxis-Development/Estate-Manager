@@ -1,4 +1,4 @@
-from django.shortcuts import render , redirect
+from django.shortcuts import render , redirect , get_object_or_404
 from .models import Contact , ContactType
 from .forms import ContactSaveForm
 # Create your views here.
@@ -29,6 +29,12 @@ def contact_list_view(request , user):
         contacts.append(c_ele)
     context['contacts'] = contacts
     context['form'] = ContactSaveForm()
-    print(context['form'])
-   
+
     return render(request , 'ContactManager/list_view.html',context)
+
+
+def update_contact_view(request , pk):
+    contact = get_object_or_404(Contact , id =  pk)
+    if request.method == 'POST':
+        form = ContactSaveForm(request.POST , instance=contact)
+    return render(request , "")
