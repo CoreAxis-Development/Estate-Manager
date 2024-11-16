@@ -6,7 +6,7 @@ class Command(BaseCommand):
     help = "Populating Database With Dummy Data"
 
     def handle(self,n= 10, *args, **kwargs ):
-        print("Contacts Populating")
+        print("ContactManager Populating")
         fake = Faker()
         # Creating Contact Types
         types = []

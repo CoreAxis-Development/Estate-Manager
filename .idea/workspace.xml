@@ -5,15 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="576f3c42-612c-4010-bc47-374575ead7f1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/AssetManager/migrations/0002_remove_doc_url_doc_file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/Lorem_ipsum.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/Lorem_ipsum_K1q6aH5.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/Lorem_ipsum_NNQKyYM.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/Lorem_ipsum_QTNGxP4.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/Lorem_ipsum_lFYkKtF.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/Lorem_ipsum_vO5pNhe.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/AssetManager/document_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/AssetManager/upload_doc.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env.local" beforeDir="false" afterPath="$PROJECT_DIR$/.env.local" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/migrations/0004_alter_checklistitem_cardinality.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckList/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckList/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckList/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactManager/management/commands/populate.py" beforeDir="false" afterPath="$PROJECT_DIR$/ContactManager/management/commands/populate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactManager/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ContactManager/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactManager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ContactManager/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Estate/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Estate/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Estate/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Estate/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserManagement/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ContactManager/list_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ContactManager/list_view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ContactManager/main_body_left.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ContactManager/main_body_left.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +69,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging user-mang",
     "last_opened_file_path": "D:/Careers/CoreAxis_Development/EstateExec/EstateManagement",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -112,13 +129,13 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DB_HOST" value="localhost" />
         <env name="DB_NAME" value="estatemanagement" />
         <env name="DB_PASSWORD" value="1512" />
         <env name="DB_PORT" value="3306" />
         <env name="DB_USER" value="Keagan" />
         <env name="DJANGO_SETTINGS_MODULE" value="Estate.settings" />
-        <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="SDK_NAME" value="Python 3.12" />
@@ -177,6 +194,8 @@
       <workItem from="1730041104734" duration="138000" />
       <workItem from="1730042034690" duration="512000" />
       <workItem from="1731077935650" duration="391000" />
+      <workItem from="1731623844941" duration="109000" />
+      <workItem from="1731769631049" duration="1357000" />
     </task>
     <servers />
   </component>

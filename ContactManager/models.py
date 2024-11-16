@@ -1,5 +1,4 @@
 from django.db import models
-from UserManagement.models import CustomUser
 
 # Create your models here.
 
@@ -16,7 +15,7 @@ class Contact(models.Model):
     company_name = models.TextField(max_length=100)
     type = models.ManyToManyField(ContactType)
     email = models.EmailField(null=True , blank=True)
-    user = models.ForeignKey(CustomUser , on_delete= models.CASCADE)
+    user = models.TextField(max_length=50)
 
     def __str__(self) -> str:
         return f" {str(self.first_name)} {str(self.last_name) } -> {str(self.company_name)}"

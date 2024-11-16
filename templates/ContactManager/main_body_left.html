@@ -3,23 +3,21 @@
     <div class="form-heading">
       Add new contact
     </div>
-    <form action="" method="post">
-      {% csrf_token %}
     <div class="input-unit">
       <label class="req">First Name*</label>
-      {{form.first_name}}
+      <input class="underline-text-field" type="text">
     </div>
     <div class="input-unit">
       <label class="req">Last Name*</label>
-      {{form.last_name}}
+      <input class="underline-text-field" type="text">
     </div>
     <div class="input-unit">
       <label class="req">Contact*</label>
-      {{form.contact}}
+      <input class="underline-text-field" type="text">
     </div>
     <div class="input-unit">
       <label >Company Name</label>
-      {{form.company_name}}
+      <input class="underline-text-field" type="text">
     </div>
     <div class="input-unit">
       <label>Email</label>
@@ -27,13 +25,18 @@
     </div>
   <div class="option-list">
       <label class="req">Select all roles apply to Contact*</label>
-      {% for checkbox in form.type %}
-      <div class="option-block">
-        {{checkbox}}</div>
-      {% endfor %}
+      <div class="option-block"> <input type="checkbox" name="" id=""> Emergency Contact</div>
+      <div class="option-block"> <input type="checkbox" name="" id=""> Executor</div>
+      <div class="option-block"> <input type="checkbox" name="" id=""> Agent under power of Attorney</div>
+      <div class="option-block"> <input type="checkbox" name="" id=""> Guardians</div>
+      <div class="option-block"> <input type="checkbox" name="" id=""> Beneficiaries</div>
+      <div class="option-block"> <input type="checkbox" name="" id=""> Trustees</div>
+      <div class="option-block"> <input type="checkbox" name="" id=""> Physician</div>
       
+     
+
   </div>
 
-  <input class="form-submit-btn" type="submit" value="Add To Contact List">
-</form>
+  <input class="form-submit-btn" type="button" value="Add To Contact List">
+  
   </div>
