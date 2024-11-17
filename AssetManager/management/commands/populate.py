@@ -11,14 +11,15 @@ class Command(BaseCommand):
     def handle(self,n= 10, *args, **kwargs ):
         print('Populating Users')
         users_data = [
-         {'username': 'user1', 'email': 'user1@example.com', 'password': 'password123' , 'role' : 'Customer'},
-         {'username': 'user2', 'email': 'user2@example.com', 'password': 'password123' , 'role' : 'Customer'},
-         {'username': 'user3', 'email': 'user3@example.com', 'password': 'password123' , 'role' : 'Customer'},
-         {'username': 'user4', 'email': 'user4@example.com', 'password': 'password123' , 'role' : 'Customer'},
-         {'username': 'user5', 'email': 'user5@example.com', 'password': 'password123' , 'role' : 'Customer'},
-         {'username': 'user6', 'email': 'user6@example.com', 'password': 'password123' , 'role' : 'Customer'},
-         {'username': 'user7', 'email': 'user7@example.com', 'password': 'password123' , 'role' : 'Customer'},
-         {'username': 'user8', 'email': 'user8@example.com', 'password': 'password123' , 'role' : 'Customer'},
+         
+         {'username': 'user5', 'email': 'user5@example.com', 'password': 'password123' , 'role' : CustomUser.RoleChoices.CUSTOMER},
+         {'username': 'user6', 'email': 'user6@example.com', 'password': 'password123' , 'role' : CustomUser.RoleChoices.CUSTOMER},
+         {'username': 'user7', 'email': 'user7@example.com', 'password': 'password123' , 'role' : CustomUser.RoleChoices.CUSTOMER},
+         {'username': 'user8', 'email': 'user8@example.com', 'password': 'password123' , 'role' : CustomUser.RoleChoices.CUSTOMER},
+         {'username': 'user1', 'email': 'user1@example.com', 'password': 'password123' , 'role' : CustomUser.RoleChoices.EXECUTOR},
+         {'username': 'user2', 'email': 'user2@example.com', 'password': 'password123' , 'role' : CustomUser.RoleChoices.EXECUTOR},
+         {'username': 'user3', 'email': 'user3@example.com', 'password': 'password123' , 'role' : CustomUser.RoleChoices.EXECUTOR},
+         {'username': 'user4', 'email': 'user4@example.com', 'password': 'password123' , 'role' : CustomUser.RoleChoices.EXECUTOR},
 ]
         for user_data in users_data:
             if not CustomUser.objects.filter(username=user_data['username']).exists():
@@ -42,14 +43,14 @@ class Command(BaseCommand):
                 Asset.objects.create(
                     title = fake.word(),
                     type = temp_asset_type,
-                    user = users[i%8],
+                    user = users[i%4],
                     value = fake.random_int(),
                   #  description = fake.sentence()
                 )
                 Debt.objects.create(
                     title = fake.word(),
                     type = temp_debt_type,
-                    user = users[i%8],
+                    user = users[i%4],
                     value = fake.random_int(),
                    # description = fake.sentence()
                 )

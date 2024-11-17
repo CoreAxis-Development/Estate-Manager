@@ -1,8 +1,8 @@
 # UserManagement/urls.py
 from django.urls import path
 from .views import (
-     login_view, logout_view, register_view, home_view,
-    two_factor_authenticate, setup_2fa, user_list_view, login_view, logout_view, register_view, home_view , users_list_view, customer_profile
+     login_view, logout_view, customer_register_view, home_view,
+    two_factor_authenticate, setup_2fa, user_list_view, login_view, logout_view, home_view , users_list_view, customer_profile
 )
 from django.contrib.auth import views as auth_views
 
@@ -11,7 +11,7 @@ urlpatterns = [
     path('users/', user_list_view, name='user_list_view'),
     path('login/', login_view, name='login'),
     path('logout/', logout_view, name='logout'),
-    path('register/', register_view, name='register'),
+    path('register/', customer_register_view, name='register'),
     path('users/list', users_list_view, name='users_list_view'),
     path('customer/profile/<str:pk>', customer_profile, name='customer_profile'),
     path('two-factor-authenticate/', two_factor_authenticate, name='two_factor_authenticate'),
