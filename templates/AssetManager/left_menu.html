@@ -1,8 +1,8 @@
 <h1> Testators index</h1>
 <ul class="main-body-left-ul">
 
-    <li class = "sub-list-parent"><a href="{% url 'asset_list_view' user %}">Assets </a>  </li>
-    <li class = "sub-list-parent"><a href="{% url 'debt_list_view' user %}">Debts </a>  </li>
-    <li class = "sub-list-parent"><a href="{% url 'collective_list_view' user %}">Collective </a>  </li>
+    <li class = "sub-list-parent"><a href="{% url 'asset_list_view' user.id %}">Assets </a>  </li>
+    <li class = "sub-list-parent"><a href="{% url 'debt_list_view' user.id %}">Debts </a>  </li>
+    <li class = "sub-list-parent"><a href="{% url 'collective_list_view' user.id %}">Collective </a>  </li>
     
   </ul>
