@@ -2,20 +2,155 @@
 {% include 'Base/navbar.html' %}
 <div class="main-body">
 
-    <div class="main-body-left">
+    
+    <div class="main-body-right">
+        
+        <div class="title-ele">{{user.username}}'s Personal Information</div> 
+
+        <form action="" method="post">
+
+        <div class="detail-card">
+            <div class="detail-row">
+                <label class="heading-lable" for="">Name and personal info</label>
+            </div>
+            <div class="detail-row">
+                <div class="col-1">
+                    <div class="block">
+                    <label for="">Title</label>
+                    <input class = "transparent-text" type="text" value = "{{customer.personal_info.first_name}}">
+                </div>
+
+                </div>
+                <div class="col-3">
+                    <div class="block">
+                    <label for="">First Name</label>
+                    <input class = "transparent-text" type="text" value = "{{customer.personal_info.first_name}}">
+                </div>
+                </div>
+                
+                <div class="col-3"> 
+                    <div class="block">
+                    <label for="">Middle Name</label>
+                    <input class = "transparent-text" type="text" value = "{{customer.personal_info.middle_name}}">
+                </div>
+                </div>
+                <div class="col-3">
+                    <div class="block">
+                    <label for="">Last Name</label>
+                    <input class = "transparent-text" type="text" value = "{{customer.personal_info.last_name}}">
+                </div>
+                </div>
+            </div>
+      
+
+        <div class="detail-row">
+            <div class="col-3">
+                <div class="block">
+                <label for="">Previous Name</label>
+                <input class = "transparent-text" type="text" value = "{{customer.personal_info.pervious_names}}">
+            </div>
+            </div>
+            <div class="col-3">
+                <div class="block">
+                <label for="">Mother's Name</label>
+                <input class = "transparent-text" type="text" value = "{{customer.personal_info.mother_name}}">
+            </div>
+            </div>
+            <div class="col-3"> 
+                <div class="block">
+                <label for="">Father's Name</label>
+                <input class = "transparent-text" type="text" value = "{{customer.personal_info.father_names}}">
+            </div>
+            </div>
+        </div>
+
+        <div class="detail-row">
+            <div class="col-1">
+                <div class="block">
+                <label for="">Sex</label>
+                <input class = "transparent-text" type="text" value = "{{customer.personal_info.sex}}">
+            </div>
+            </div>
+            <div class="col-3">
+                <div class="block">
+                <label for="">Date of Birth</label>
+                <input class = "transparent-text" type="text" value = "{{customer.personal_info.date_of_birth}}">
+            </div>
+            </div>
+            <div class="col-3">
+                <div class="block">
+                <label for="">Place of Birth</label>
+                <input class = "transparent-text" type="text" value = "{{customer.personal_info.place_of_birth}}">
+            </div>
+            </div>
+            <div class="col-3">
+                <div class="block">
+                <label for="">Citizenship</label>
+                <input class = "transparent-text" type="text" value = "{{customer.personal_info.citizenship}}">
+            </div>
+            </div>
+        </div>
+    
     
     </div>
-    <div class="main-body-right">
-        <h1>{{user.username}}</h1>
-        <h1>{{user.email}}</h1>
-        
-        <a href="{% url 'asset_list_view' user.id %}">View Assests</a>
-         <a href="{% url 'checklist_item_list_view' user.id %}">View Check List</a>
-         <a href="{% url 'create_checklist_item_status_list' user.id %}">Create Check List</a>
-          <a href="{% url 'contact_list_view' user.id %}">View Contacts</a>
+
+    <div class="detail-card">
+        <div class="detail-row">
+            <label class="heading-lable" for="">Contact info</label>
+        </div>
+        <div class="detail-row">
+           
+            <div class="col-6">
+                <div class="block">
+                <label for="">Street Address</label>
+                <input class = "transparent-text" type="text" value = "{{customer.contact_info.street_address}}">
+            </div>
+            </div>
+            
+            <div class="col-3"> 
+                <div class="block">
+                <label for="">City</label>
+                <input class = "transparent-text" type="text" value = "{{customer.contact_info.city}}">
+            </div>
+            </div>
+            <div class="col-3">
+                <div class="block">
+                <label for="">Province</label>
+                <input class = "transparent-text" type="text" value = "{{customer.contact_info.province}}">
+            </div>
+            </div>
+        </div>
+  
+
+    <div class="detail-row">
+        <div class="col-3">
+            <div class="block">
+            <label for="">Country</label>
+            <input class = "transparent-text" type="text" value = "{{customer.contact_info.country}}">
+        </div>
+        </div>
+        <div class="col-3">
+            <div class="block">
+            <label for="">postal code</label>
+            <input class = "transparent-text" type="text" value = "{{customer.contact_info.postal_code}}">
+        </div>
+        </div>
+       
+    </div>
 
    
+
 </div>
+    
+    <input type="submit" value = "SAVE">
+</form>
+        <!-- <a href="{% url 'asset_list_view' user.id %}">View Assests</a>
+         <a href="{% url 'checklist_item_list_view' user.id %}">View Check List</a>
+         <a href="{% url 'create_checklist_item_status_list' user.id %}">Create Check List</a>
+          <a href="{% url 'contact_list_view' user.id %}">View Contacts</a> -->
+
+   
+
 
 
     </div>

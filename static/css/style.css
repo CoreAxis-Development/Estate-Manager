@@ -313,6 +313,11 @@ tr:nth-child(odd){
     display: flex;
     flex-direction: column;
 }
+.col-6{
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+}
 .block{
     display: flex;
     flex-direction: column;
@@ -636,6 +641,7 @@ tr:nth-child(odd){
 .home-main-body{
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .home-img-container{

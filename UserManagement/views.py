@@ -124,8 +124,14 @@ def customer_profile(request , pk):
 
     if not is_valid_user(request , pk):
         return redirect('unauth_error')
+    
+    
 
     user = CustomUser.objects.get(id = pk)
-    context = {'user': user}
+    customer = Customer.objects.get(user = user)
+    if request.method == 'POST':
+        customer.personal_info.first_name = request.POST
+    context = {'user': user , 'customer' : customer}
+
 
     return render(request , 'UserManagement/customer_profile.html' , context)

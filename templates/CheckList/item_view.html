@@ -14,11 +14,13 @@
     
     </div>
     <div class="nav-controls">
-        <a href="#" class="previous round">&#8249;</a>
-<a href="progress2.html" class="next round">&#8250;</a>
+        <a href="{% url 'single_checlist_item_status_view' pitem.item.id %}" class="previous round">&#8249;</a>
+<a href="{% url 'single_checlist_item_status_view' nitem.item.id %}" class="next round">&#8250;</a>
     </div>
 
-   
+    <br><br><br>
+
+   <a href="{% url 'checklist_item_list_view' item.user.id %}" class="button">List View</a>
     
 
 </div>

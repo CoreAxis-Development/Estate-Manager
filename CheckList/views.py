@@ -7,8 +7,26 @@ from .helper import is_allowed_user
 def single_checlist_item_status_view(request, pk):
     context = {}
     check_list_item = CheckListItemStatus.objects.get(id=pk)
+    all_item = CheckListItemStatus.objects.filter(user = check_list_item.user)
+    next_item = check_list_item
+    prev_item = check_list_item
+    item_reached = False
+    for item in all_item:
+        if item_reached :
+            next_item = item
+            break
+        if item == check_list_item :
+            item_reached = True
+        
+        if not item_reached:
+            prev_item = item
+        
+        
+    
     if is_allowed_user(request , check_list_item):
         context['item'] = check_list_item
+        context['nitem'] = next_item
+        context['pitem'] = prev_item
         return render(request, 'CheckList/item_view.html', context=context)
     else :
         return redirect('unauth_error')
