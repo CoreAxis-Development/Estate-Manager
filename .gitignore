@@ -13,3 +13,5 @@ media
 *.local
 .idea/
 .env
+*.local
+*.lock

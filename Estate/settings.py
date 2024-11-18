@@ -17,7 +17,7 @@ SECRET_KEY = 'django-insecure-cfrr3zp!=74ot=_rshcwc@)cd85fj@g$g_8oc@738$z9ps(_s3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['72f3-103-212-153-13.ngrok-free.app']
+ALLOWED_HOSTS = ['72f3-103-212-153-13.ngrok-free.app', 'localhost', ]
 
 # Application definition
 INSTALLED_APPS = [
@@ -45,10 +45,30 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django_otp.middleware.OTPMiddleware',  # Add this line
+    'django_otp.middleware.OTPMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'Base.system_stats_middleware.SystemStatsMiddleware',  # Add this line
 ]
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'system_stats.log'),
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+    },
+}
 
 ROOT_URLCONF = 'Estate.urls'
 
@@ -76,10 +96,10 @@ WSGI_APPLICATION = 'Estate.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST', 'db'),
+        'NAME': os.getenv('DB_NAME', 'estatemanagement'),
+        'USER': os.getenv('DB_USER', 'admin'),
+        'PASSWORD': os.getenv('DB_PASSWORD', '9yR4aSL9n2Qm1uw'),
+        'HOST': os.getenv('DB_HOST', 'rdsestatemanager.clck0wqus9h9.us-east-1.rds.amazonaws.com'),
         'PORT': os.getenv('DB_PORT', '3306'),
     }
 }
