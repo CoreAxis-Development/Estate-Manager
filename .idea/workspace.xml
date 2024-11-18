@@ -5,15 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="576f3c42-612c-4010-bc47-374575ead7f1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.env.local" beforeDir="false" afterPath="$PROJECT_DIR$/.env.local" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.local" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssetManager/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssetManager/migrations/0002_alter_asset_user_alter_debt_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssetManager/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/migrations/0002_checklistitemstatus_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/migrations/0003_remove_checklistcategory_items_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/migrations/0004_alter_checklistitem_cardinality.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckList/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactManager/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactManager/migrations/0002_contact_email.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactManager/migrations/0003_alter_contact_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactManager/migrations/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Estate/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Estate/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserManagement/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/migrations/0002_alter_customuser_role.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/migrations/0003_customer_staff.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/migrations/0004_additionalinformation_contactinformation_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/migrations/0005_alter_customer_user_alter_staff_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/migrations/0006_alter_staff_assinged_customer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/migrations/0007_personalinformation_citizenship_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/migrations/0008_personalinformation_title.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/migrations/0009_contactinformation_city_contactinformation_country_and_more.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UserManagement/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,31 +60,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.EstateManagement.executor": "Run",
-    "Python.manage.py migrate.executor": "Run",
-    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/Careers/CoreAxis_Development/EstateExec/EstateManagement",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.EstateManagement.executor&quot;: &quot;Run&quot;,
+    &quot;Python.manage.py migrate.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#8 on user-mang&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Careers/CoreAxis_Development/EstateExec/EstateManagement&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Django Server.EstateManagement">
     <configuration name="manage.py migrate" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="EstateManagement" />
@@ -112,13 +130,13 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DB_HOST" value="localhost" />
         <env name="DB_NAME" value="estatemanagement" />
         <env name="DB_PASSWORD" value="1512" />
         <env name="DB_PORT" value="3306" />
         <env name="DB_USER" value="Keagan" />
         <env name="DJANGO_SETTINGS_MODULE" value="Estate.settings" />
-        <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="SDK_NAME" value="Python 3.12" />

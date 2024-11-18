@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="estatemanagment@localhost">
+<dataSource name="estatemanagement@localhost">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.53">
     <root id="1">
       <DefaultCasing>lower/lower</DefaultCasing>
@@ -1023,9 +1023,9 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <collation id="287" parent="1" name="utf8mb4_zh_0900_as_cs">
       <Charset>utf8mb4</Charset>
     </collation>
-    <schema id="288" parent="1" name="estatemanagment">
+    <schema id="288" parent="1" name="estatemanagement">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-10-31.15:30:32</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-11-18.21:38:29</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="289" parent="1" name="go_api">
@@ -1040,48 +1040,1429 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <schema id="292" parent="1" name="lxlibrary">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="293" parent="1" name="lxluibrary">
+    <schema id="293" parent="1" name="mysql">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="294" parent="1" name="mysql">
+    <schema id="294" parent="1" name="performance_schema">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="295" parent="1" name="performance_schema">
+    <schema id="295" parent="1" name="scheduleoptimizer">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="296" parent="1" name="scheduleoptimizer">
+    <schema id="296" parent="1" name="sys">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="297" parent="1" name="sys">
+    <schema id="297" parent="1" name="tasktracker">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="298" parent="1" name="tasktracker">
+    <schema id="298" parent="1" name="test_tasktracker">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="299" parent="1" name="test_tasktracker">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <user id="300" parent="1" name="Keagan">
+    <user id="299" parent="1" name="Keagan">
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="301" parent="1" name="mysql.infoschema">
+    <user id="300" parent="1" name="mysql.infoschema">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="302" parent="1" name="mysql.session">
+    <user id="301" parent="1" name="mysql.session">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="303" parent="1" name="mysql.sys">
+    <user id="302" parent="1" name="mysql.sys">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="304" parent="1" name="root">
+    <user id="303" parent="1" name="root">
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
+    <table id="304" parent="288" name="assetmanager_asset">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="305" parent="288" name="assetmanager_assettype">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="306" parent="288" name="assetmanager_debt">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="307" parent="288" name="assetmanager_debttype">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="308" parent="288" name="assetmanager_doc">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="309" parent="288" name="assetmanager_doctype">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="310" parent="288" name="auth_group">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="311" parent="288" name="auth_group_permissions">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="312" parent="288" name="auth_permission">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="313" parent="288" name="base_homepage">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="314" parent="288" name="checklist_checklistcategory">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="315" parent="288" name="checklist_checklistitem">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="316" parent="288" name="checklist_checklistitemstatus">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="317" parent="288" name="django_admin_log">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="318" parent="288" name="django_content_type">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="319" parent="288" name="django_migrations">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="320" parent="288" name="django_session">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="321" parent="288" name="otp_totp_totpdevice">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="322" parent="288" name="usermanagement_additionalinformation">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="323" parent="288" name="usermanagement_contactinformation">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="324" parent="288" name="usermanagement_customer">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="325" parent="288" name="usermanagement_customuser">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="326" parent="288" name="usermanagement_customuser_groups">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="327" parent="288" name="usermanagement_customuser_user_permissions">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="328" parent="288" name="usermanagement_personalinformation">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="329" parent="288" name="usermanagement_spouseinformation">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="330" parent="288" name="usermanagement_staff">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="331" parent="288" name="usermanagement_staff_assinged_customer">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <column id="332" parent="304" name="id">
+      <AutoIncrement>101</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="333" parent="304" name="title">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="334" parent="304" name="value">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>double|0s</StoredType>
+    </column>
+    <column id="335" parent="304" name="description">
+      <Position>4</Position>
+      <StoredType>longtext|0s</StoredType>
+    </column>
+    <column id="336" parent="304" name="user_id">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="337" parent="304" name="type_id">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <foreign-key id="338" parent="304" name="AssetManager_asset_user_id_529f95bc_fk_UserManag">
+      <ColNames>user_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>usermanagement_customuser</RefTableName>
+    </foreign-key>
+    <foreign-key id="339" parent="304" name="AssetManager_asset_type_id_e15af92c_fk_AssetManager_assettype_id">
+      <ColNames>type_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>assetmanager_assettype</RefTableName>
+    </foreign-key>
+    <index id="340" parent="304" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="341" parent="304" name="AssetManager_asset_user_id_529f95bc_fk_UserManag">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="342" parent="304" name="AssetManager_asset_type_id_e15af92c_fk_AssetManager_assettype_id">
+      <ColNames>type_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="343" parent="304" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="344" parent="305" name="id">
+      <AutoIncrement>11</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="345" parent="305" name="title">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="346" parent="305" name="description">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <index id="347" parent="305" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="348" parent="305" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="349" parent="306" name="id">
+      <AutoIncrement>101</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="350" parent="306" name="title">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="351" parent="306" name="value">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>double|0s</StoredType>
+    </column>
+    <column id="352" parent="306" name="description">
+      <Position>4</Position>
+      <StoredType>longtext|0s</StoredType>
+    </column>
+    <column id="353" parent="306" name="user_id">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="354" parent="306" name="type_id">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <foreign-key id="355" parent="306" name="AssetManager_debt_user_id_414ee5b9_fk_UserManag">
+      <ColNames>user_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>usermanagement_customuser</RefTableName>
+    </foreign-key>
+    <foreign-key id="356" parent="306" name="AssetManager_debt_type_id_5480f5e1_fk_AssetManager_debttype_id">
+      <ColNames>type_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>assetmanager_debttype</RefTableName>
+    </foreign-key>
+    <index id="357" parent="306" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="358" parent="306" name="AssetManager_debt_user_id_414ee5b9_fk_UserManag">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="359" parent="306" name="AssetManager_debt_type_id_5480f5e1_fk_AssetManager_debttype_id">
+      <ColNames>type_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="360" parent="306" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="361" parent="307" name="id">
+      <AutoIncrement>11</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="362" parent="307" name="title">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="363" parent="307" name="description">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <index id="364" parent="307" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="365" parent="307" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="366" parent="308" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="367" parent="308" name="url">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="368" parent="308" name="created_at">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>datetime(6)|0s</StoredType>
+    </column>
+    <column id="369" parent="308" name="updated_at">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>datetime(6)|0s</StoredType>
+    </column>
+    <column id="370" parent="308" name="doc_type_id">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <foreign-key id="371" parent="308" name="AssetManager_doc_doc_type_id_35b97401_fk_AssetManager_doctype_id">
+      <ColNames>doc_type_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>assetmanager_doctype</RefTableName>
+    </foreign-key>
+    <index id="372" parent="308" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="373" parent="308" name="AssetManager_doc_doc_type_id_35b97401_fk_AssetManager_doctype_id">
+      <ColNames>doc_type_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="374" parent="308" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="375" parent="309" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="376" parent="309" name="name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <index id="377" parent="309" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="378" parent="309" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="379" parent="310" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="380" parent="310" name="name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(150)|0s</StoredType>
+    </column>
+    <index id="381" parent="310" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="382" parent="310" name="name">
+      <ColNames>name</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="383" parent="310" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="384" parent="310" name="name">
+      <UnderlyingIndexName>name</UnderlyingIndexName>
+    </key>
+    <column id="385" parent="311" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="386" parent="311" name="group_id">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="387" parent="311" name="permission_id">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <foreign-key id="388" parent="311" name="auth_group_permissions_group_id_b120cbf9_fk_auth_group_id">
+      <ColNames>group_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>auth_group</RefTableName>
+    </foreign-key>
+    <foreign-key id="389" parent="311" name="auth_group_permissio_permission_id_84c5c92e_fk_auth_perm">
+      <ColNames>permission_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>auth_permission</RefTableName>
+    </foreign-key>
+    <index id="390" parent="311" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="391" parent="311" name="auth_group_permissions_group_id_permission_id_0cd325b0_uniq">
+      <ColNames>group_id
+permission_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="392" parent="311" name="auth_group_permissio_permission_id_84c5c92e_fk_auth_perm">
+      <ColNames>permission_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="393" parent="311" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="394" parent="311" name="auth_group_permissions_group_id_permission_id_0cd325b0_uniq">
+      <UnderlyingIndexName>auth_group_permissions_group_id_permission_id_0cd325b0_uniq</UnderlyingIndexName>
+    </key>
+    <column id="395" parent="312" name="id">
+      <AutoIncrement>101</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="396" parent="312" name="name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="397" parent="312" name="content_type_id">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="398" parent="312" name="codename">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <foreign-key id="399" parent="312" name="auth_permission_content_type_id_2f476e4b_fk_django_co">
+      <ColNames>content_type_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>django_content_type</RefTableName>
+    </foreign-key>
+    <index id="400" parent="312" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="401" parent="312" name="auth_permission_content_type_id_codename_01ab375a_uniq">
+      <ColNames>content_type_id
+codename</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="402" parent="312" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="403" parent="312" name="auth_permission_content_type_id_codename_01ab375a_uniq">
+      <UnderlyingIndexName>auth_permission_content_type_id_codename_01ab375a_uniq</UnderlyingIndexName>
+    </key>
+    <column id="404" parent="313" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="405" parent="313" name="is_active">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>tinyint(1)|0s</StoredType>
+    </column>
+    <column id="406" parent="313" name="logo">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="407" parent="313" name="title">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <index id="408" parent="313" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="409" parent="313" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="410" parent="314" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="411" parent="314" name="title">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <index id="412" parent="314" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="413" parent="314" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="414" parent="315" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="415" parent="315" name="title">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="416" parent="315" name="notes">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>longtext|0s</StoredType>
+    </column>
+    <column id="417" parent="315" name="start_date">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <column id="418" parent="315" name="end_date">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <column id="419" parent="315" name="assisted_by">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>varchar(70)|0s</StoredType>
+    </column>
+    <column id="420" parent="315" name="cardinality">
+      <Position>7</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="421" parent="315" name="category_id">
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <foreign-key id="422" parent="315" name="CheckList_checklisti_category_id_18c0d726_fk_CheckList">
+      <ColNames>category_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>checklist_checklistcategory</RefTableName>
+    </foreign-key>
+    <index id="423" parent="315" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="424" parent="315" name="cardinality">
+      <ColNames>cardinality</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="425" parent="315" name="CheckList_checklisti_category_id_18c0d726_fk_CheckList">
+      <ColNames>category_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="426" parent="315" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="427" parent="315" name="cardinality">
+      <UnderlyingIndexName>cardinality</UnderlyingIndexName>
+    </key>
+    <column id="428" parent="316" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="429" parent="316" name="status">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="430" parent="316" name="item_id">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="431" parent="316" name="user_id">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <foreign-key id="432" parent="316" name="CheckList_checklisti_item_id_51b34b75_fk_CheckList">
+      <ColNames>item_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>checklist_checklistitem</RefTableName>
+    </foreign-key>
+    <foreign-key id="433" parent="316" name="CheckList_checklisti_user_id_d6ae972c_fk_UserManag">
+      <ColNames>user_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>usermanagement_customuser</RefTableName>
+    </foreign-key>
+    <index id="434" parent="316" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="435" parent="316" name="CheckList_checklisti_item_id_51b34b75_fk_CheckList">
+      <ColNames>item_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="436" parent="316" name="CheckList_checklisti_user_id_d6ae972c_fk_UserManag">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="437" parent="316" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <check id="438" parent="317" name="django_admin_log_chk_1">
+      <NameSurrogate>1</NameSurrogate>
+      <Predicate>`action_flag` &gt;= 0</Predicate>
+    </check>
+    <column id="439" parent="317" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="440" parent="317" name="action_time">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>datetime(6)|0s</StoredType>
+    </column>
+    <column id="441" parent="317" name="object_id">
+      <Position>3</Position>
+      <StoredType>longtext|0s</StoredType>
+    </column>
+    <column id="442" parent="317" name="object_repr">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(200)|0s</StoredType>
+    </column>
+    <column id="443" parent="317" name="action_flag">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>smallint unsigned|0s</StoredType>
+    </column>
+    <column id="444" parent="317" name="change_message">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>longtext|0s</StoredType>
+    </column>
+    <column id="445" parent="317" name="content_type_id">
+      <Position>7</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="446" parent="317" name="user_id">
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <foreign-key id="447" parent="317" name="django_admin_log_content_type_id_c4bce8eb_fk_django_co">
+      <ColNames>content_type_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>django_content_type</RefTableName>
+    </foreign-key>
+    <foreign-key id="448" parent="317" name="django_admin_log_user_id_c564eba6_fk_UserManag">
+      <ColNames>user_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>usermanagement_customuser</RefTableName>
+    </foreign-key>
+    <index id="449" parent="317" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="450" parent="317" name="django_admin_log_content_type_id_c4bce8eb_fk_django_co">
+      <ColNames>content_type_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="451" parent="317" name="django_admin_log_user_id_c564eba6_fk_UserManag">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="452" parent="317" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="453" parent="318" name="id">
+      <AutoIncrement>26</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="454" parent="318" name="app_label">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="455" parent="318" name="model">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <index id="456" parent="318" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="457" parent="318" name="django_content_type_app_label_model_76bd3d3b_uniq">
+      <ColNames>app_label
+model</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="458" parent="318" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="459" parent="318" name="django_content_type_app_label_model_76bd3d3b_uniq">
+      <UnderlyingIndexName>django_content_type_app_label_model_76bd3d3b_uniq</UnderlyingIndexName>
+    </key>
+    <column id="460" parent="319" name="id">
+      <AutoIncrement>26</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="461" parent="319" name="app">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="462" parent="319" name="name">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="463" parent="319" name="applied">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>datetime(6)|0s</StoredType>
+    </column>
+    <index id="464" parent="319" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="465" parent="319" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="466" parent="320" name="session_key">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>varchar(40)|0s</StoredType>
+    </column>
+    <column id="467" parent="320" name="session_data">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>longtext|0s</StoredType>
+    </column>
+    <column id="468" parent="320" name="expire_date">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>datetime(6)|0s</StoredType>
+    </column>
+    <index id="469" parent="320" name="PRIMARY">
+      <ColNames>session_key</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="470" parent="320" name="django_session_expire_date_a5c62663">
+      <ColNames>expire_date</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="471" parent="320" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <check id="472" parent="321" name="otp_totp_totpdevice_chk_2">
+      <NameSurrogate>1</NameSurrogate>
+      <Predicate>`digits` &gt;= 0</Predicate>
+    </check>
+    <check id="473" parent="321" name="otp_totp_totpdevice_chk_1">
+      <NameSurrogate>1</NameSurrogate>
+      <Predicate>`step` &gt;= 0</Predicate>
+    </check>
+    <check id="474" parent="321" name="otp_totp_totpdevice_chk_4">
+      <NameSurrogate>1</NameSurrogate>
+      <Predicate>`throttling_failure_count` &gt;= 0</Predicate>
+    </check>
+    <check id="475" parent="321" name="otp_totp_totpdevice_chk_3">
+      <NameSurrogate>1</NameSurrogate>
+      <Predicate>`tolerance` &gt;= 0</Predicate>
+    </check>
+    <column id="476" parent="321" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="477" parent="321" name="name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(64)|0s</StoredType>
+    </column>
+    <column id="478" parent="321" name="confirmed">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>tinyint(1)|0s</StoredType>
+    </column>
+    <column id="479" parent="321" name="key">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(80)|0s</StoredType>
+    </column>
+    <column id="480" parent="321" name="step">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>smallint unsigned|0s</StoredType>
+    </column>
+    <column id="481" parent="321" name="t0">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="482" parent="321" name="digits">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>smallint unsigned|0s</StoredType>
+    </column>
+    <column id="483" parent="321" name="tolerance">
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>smallint unsigned|0s</StoredType>
+    </column>
+    <column id="484" parent="321" name="drift">
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StoredType>smallint|0s</StoredType>
+    </column>
+    <column id="485" parent="321" name="last_t">
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="486" parent="321" name="user_id">
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="487" parent="321" name="throttling_failure_count">
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+      <StoredType>int unsigned|0s</StoredType>
+    </column>
+    <column id="488" parent="321" name="throttling_failure_timestamp">
+      <Position>13</Position>
+      <StoredType>datetime(6)|0s</StoredType>
+    </column>
+    <column id="489" parent="321" name="created_at">
+      <Position>14</Position>
+      <StoredType>datetime(6)|0s</StoredType>
+    </column>
+    <column id="490" parent="321" name="last_used_at">
+      <Position>15</Position>
+      <StoredType>datetime(6)|0s</StoredType>
+    </column>
+    <foreign-key id="491" parent="321" name="otp_totp_totpdevice_user_id_0fb18292_fk_UserManag">
+      <ColNames>user_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>usermanagement_customuser</RefTableName>
+    </foreign-key>
+    <index id="492" parent="321" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="493" parent="321" name="otp_totp_totpdevice_user_id_0fb18292_fk_UserManag">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="494" parent="321" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="495" parent="322" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <index id="496" parent="322" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="497" parent="322" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="498" parent="323" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="499" parent="323" name="street_address">
+      <Position>2</Position>
+      <StoredType>varchar(500)|0s</StoredType>
+    </column>
+    <column id="500" parent="323" name="city">
+      <Position>3</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="501" parent="323" name="province">
+      <Position>4</Position>
+      <StoredType>varchar(500)|0s</StoredType>
+    </column>
+    <column id="502" parent="323" name="country">
+      <Position>5</Position>
+      <StoredType>varchar(500)|0s</StoredType>
+    </column>
+    <column id="503" parent="323" name="postal_code">
+      <Position>6</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <index id="504" parent="323" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="505" parent="323" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="506" parent="324" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="507" parent="324" name="additional_info_id">
+      <Position>2</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="508" parent="324" name="contact_info_id">
+      <Position>3</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="509" parent="324" name="personal_info_id">
+      <Position>4</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="510" parent="324" name="spouse_info_id">
+      <Position>5</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="511" parent="324" name="user_id">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <foreign-key id="512" parent="324" name="UserManagement_custo_additional_info_id_bdd1cef3_fk_UserManag">
+      <ColNames>additional_info_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>usermanagement_additionalinformation</RefTableName>
+    </foreign-key>
+    <foreign-key id="513" parent="324" name="UserManagement_custo_contact_info_id_8c064aca_fk_UserManag">
+      <ColNames>contact_info_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>usermanagement_contactinformation</RefTableName>
+    </foreign-key>
+    <foreign-key id="514" parent="324" name="UserManagement_custo_personal_info_id_332ccabb_fk_UserManag">
+      <ColNames>personal_info_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>usermanagement_personalinformation</RefTableName>
+    </foreign-key>
+    <foreign-key id="515" parent="324" name="UserManagement_custo_spouse_info_id_6acaece0_fk_UserManag">
+      <ColNames>spouse_info_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>usermanagement_spouseinformation</RefTableName>
+    </foreign-key>
+    <foreign-key id="516" parent="324" name="UserManagement_custo_user_id_c0d4ee26_fk_UserManag">
+      <ColNames>user_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>usermanagement_customuser</RefTableName>
+    </foreign-key>
+    <index id="517" parent="324" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="518" parent="324" name="user_id">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="519" parent="324" name="UserManagement_custo_additional_info_id_bdd1cef3_fk_UserManag">
+      <ColNames>additional_info_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="520" parent="324" name="UserManagement_custo_contact_info_id_8c064aca_fk_UserManag">
+      <ColNames>contact_info_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="521" parent="324" name="UserManagement_custo_personal_info_id_332ccabb_fk_UserManag">
+      <ColNames>personal_info_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="522" parent="324" name="UserManagement_custo_spouse_info_id_6acaece0_fk_UserManag">
+      <ColNames>spouse_info_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="523" parent="324" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="524" parent="324" name="user_id">
+      <UnderlyingIndexName>user_id</UnderlyingIndexName>
+    </key>
+    <column id="525" parent="325" name="id">
+      <AutoIncrement>9</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="526" parent="325" name="password">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(128)|0s</StoredType>
+    </column>
+    <column id="527" parent="325" name="last_login">
+      <Position>3</Position>
+      <StoredType>datetime(6)|0s</StoredType>
+    </column>
+    <column id="528" parent="325" name="is_superuser">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>tinyint(1)|0s</StoredType>
+    </column>
+    <column id="529" parent="325" name="username">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>varchar(150)|0s</StoredType>
+    </column>
+    <column id="530" parent="325" name="first_name">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>varchar(150)|0s</StoredType>
+    </column>
+    <column id="531" parent="325" name="last_name">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>varchar(150)|0s</StoredType>
+    </column>
+    <column id="532" parent="325" name="email">
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>varchar(254)|0s</StoredType>
+    </column>
+    <column id="533" parent="325" name="is_staff">
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StoredType>tinyint(1)|0s</StoredType>
+    </column>
+    <column id="534" parent="325" name="is_active">
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+      <StoredType>tinyint(1)|0s</StoredType>
+    </column>
+    <column id="535" parent="325" name="date_joined">
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+      <StoredType>datetime(6)|0s</StoredType>
+    </column>
+    <column id="536" parent="325" name="role">
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+      <StoredType>varchar(10)|0s</StoredType>
+    </column>
+    <index id="537" parent="325" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="538" parent="325" name="username">
+      <ColNames>username</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="539" parent="325" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="540" parent="325" name="username">
+      <UnderlyingIndexName>username</UnderlyingIndexName>
+    </key>
+    <column id="541" parent="326" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="542" parent="326" name="customuser_id">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="543" parent="326" name="group_id">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <foreign-key id="544" parent="326" name="UserManagement_custo_customuser_id_70bbe361_fk_UserManag">
+      <ColNames>customuser_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>usermanagement_customuser</RefTableName>
+    </foreign-key>
+    <foreign-key id="545" parent="326" name="UserManagement_custo_group_id_f0a7d4bc_fk_auth_grou">
+      <ColNames>group_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>auth_group</RefTableName>
+    </foreign-key>
+    <index id="546" parent="326" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="547" parent="326" name="UserManagement_customuse_customuser_id_group_id_f2a6324c_uniq">
+      <ColNames>customuser_id
+group_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="548" parent="326" name="UserManagement_custo_group_id_f0a7d4bc_fk_auth_grou">
+      <ColNames>group_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="549" parent="326" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="550" parent="326" name="UserManagement_customuse_customuser_id_group_id_f2a6324c_uniq">
+      <UnderlyingIndexName>UserManagement_customuse_customuser_id_group_id_f2a6324c_uniq</UnderlyingIndexName>
+    </key>
+    <column id="551" parent="327" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="552" parent="327" name="customuser_id">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="553" parent="327" name="permission_id">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <foreign-key id="554" parent="327" name="UserManagement_custo_customuser_id_09f58809_fk_UserManag">
+      <ColNames>customuser_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>usermanagement_customuser</RefTableName>
+    </foreign-key>
+    <foreign-key id="555" parent="327" name="UserManagement_custo_permission_id_8ffff00b_fk_auth_perm">
+      <ColNames>permission_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>auth_permission</RefTableName>
+    </foreign-key>
+    <index id="556" parent="327" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="557" parent="327" name="UserManagement_customuse_customuser_id_permission_ae6a6738_uniq">
+      <ColNames>customuser_id
+permission_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="558" parent="327" name="UserManagement_custo_permission_id_8ffff00b_fk_auth_perm">
+      <ColNames>permission_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="559" parent="327" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="560" parent="327" name="UserManagement_customuse_customuser_id_permission_ae6a6738_uniq">
+      <UnderlyingIndexName>UserManagement_customuse_customuser_id_permission_ae6a6738_uniq</UnderlyingIndexName>
+    </key>
+    <column id="561" parent="328" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="562" parent="328" name="title">
+      <Position>2</Position>
+      <StoredType>varchar(10)|0s</StoredType>
+    </column>
+    <column id="563" parent="328" name="first_name">
+      <Position>3</Position>
+      <StoredType>varchar(150)|0s</StoredType>
+    </column>
+    <column id="564" parent="328" name="middle_name">
+      <Position>4</Position>
+      <StoredType>varchar(150)|0s</StoredType>
+    </column>
+    <column id="565" parent="328" name="last_name">
+      <Position>5</Position>
+      <StoredType>varchar(150)|0s</StoredType>
+    </column>
+    <column id="566" parent="328" name="pervious_names">
+      <Position>6</Position>
+      <StoredType>varchar(500)|0s</StoredType>
+    </column>
+    <column id="567" parent="328" name="mother_name">
+      <Position>7</Position>
+      <StoredType>varchar(500)|0s</StoredType>
+    </column>
+    <column id="568" parent="328" name="father_names">
+      <Position>8</Position>
+      <StoredType>varchar(500)|0s</StoredType>
+    </column>
+    <column id="569" parent="328" name="place_of_birth">
+      <Position>9</Position>
+      <StoredType>varchar(150)|0s</StoredType>
+    </column>
+    <column id="570" parent="328" name="date_of_birth">
+      <Position>10</Position>
+      <StoredType>varchar(150)|0s</StoredType>
+    </column>
+    <column id="571" parent="328" name="citizenship">
+      <Position>11</Position>
+      <StoredType>varchar(150)|0s</StoredType>
+    </column>
+    <column id="572" parent="328" name="sex">
+      <Position>12</Position>
+      <StoredType>varchar(150)|0s</StoredType>
+    </column>
+    <index id="573" parent="328" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="574" parent="328" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="575" parent="329" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <index id="576" parent="329" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="577" parent="329" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="578" parent="330" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="579" parent="330" name="user_id">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <foreign-key id="580" parent="330" name="UserManagement_staff_user_id_32b88c8b_fk_UserManag">
+      <ColNames>user_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>usermanagement_customuser</RefTableName>
+    </foreign-key>
+    <index id="581" parent="330" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="582" parent="330" name="user_id">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="583" parent="330" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="584" parent="330" name="user_id">
+      <UnderlyingIndexName>user_id</UnderlyingIndexName>
+    </key>
+    <column id="585" parent="331" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="586" parent="331" name="staff_id">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="587" parent="331" name="customer_id">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <foreign-key id="588" parent="331" name="UserManagement_staff_staff_id_35327cec_fk_UserManag">
+      <ColNames>staff_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>usermanagement_staff</RefTableName>
+    </foreign-key>
+    <foreign-key id="589" parent="331" name="UserManagement_staff_customer_id_cc4f911d_fk_UserManag">
+      <ColNames>customer_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>usermanagement_customer</RefTableName>
+    </foreign-key>
+    <index id="590" parent="331" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="591" parent="331" name="UserManagement_staff_ass_staff_id_customer_id_ee7227dd_uniq">
+      <ColNames>staff_id
+customer_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="592" parent="331" name="UserManagement_staff_customer_id_cc4f911d_fk_UserManag">
+      <ColNames>customer_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="593" parent="331" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="594" parent="331" name="UserManagement_staff_ass_staff_id_customer_id_ee7227dd_uniq">
+      <UnderlyingIndexName>UserManagement_staff_ass_staff_id_customer_id_ee7227dd_uniq</UnderlyingIndexName>
+    </key>
   </database-model>
 </dataSource>
