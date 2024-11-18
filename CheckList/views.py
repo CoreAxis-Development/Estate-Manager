@@ -40,8 +40,10 @@ def checklist_item_list_view_self(request):
 
 def checklist_item_list_view(request, user):
     context = {}
+    user = CustomUser.objects.get(id = user)
     items = CheckListItemStatus.objects.filter(user=user)
     context['items'] = items
+    context['user'] = user
     return render(request, "CheckList/item_list_view.html", context=context)
 
 

@@ -12,9 +12,10 @@ def asset_list_view(request , user):
         form = AddAssetForm(request.POST or None)
         if form.is_valid():
             asset = form.save(commit=False)
+            user = CustomUser.objects.get(id = user)
             asset.user = user
             asset.save()
-            return redirect('asset_list_view' , user)
+            return redirect('asset_list_view' , user.id)
         
     user = CustomUser.objects.get(id = user)
     context['assets'] = assets
@@ -31,9 +32,10 @@ def debt_list_view(request , user):
         form = AddDebtForm(request.POST or None)
         if form.is_valid():
             debt = form.save(commit=False)
+            user = CustomUser.objects.get(id = user)
             debt.user = user
             debt.save()
-            return redirect('debt_list_view' , user)
+            return redirect('debt_list_view' , user.id)
     
     user = CustomUser.objects.get(id = user)
     context['debts'] = debts

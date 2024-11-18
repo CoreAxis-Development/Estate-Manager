@@ -1,5 +1,6 @@
 from django.shortcuts import render , redirect , get_object_or_404
 from .models import Contact , ContactType
+from UserManagement.models import CustomUser
 from .forms import ContactSaveForm
 # Create your views here.
 
@@ -28,6 +29,7 @@ def contact_list_view(request , user):
                 c_ele['items'].append(contact)
         contacts.append(c_ele)
     context['contacts'] = contacts
+    context['user'] = CustomUser.objects.get(id = user)
     context['form'] = ContactSaveForm()
 
     return render(request , 'ContactManager/list_view.html',context)

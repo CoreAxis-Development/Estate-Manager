@@ -8,6 +8,7 @@
         <div class="title-ele">{{user.username}}'s Personal Information</div> 
 
         <form action="" method="post">
+            {% csrf_token %}
 
         <div class="detail-card">
             <div class="detail-row">
@@ -17,27 +18,27 @@
                 <div class="col-1">
                     <div class="block">
                     <label for="">Title</label>
-                    <input class = "transparent-text" type="text" value = "{{customer.personal_info.first_name}}">
+                    <input class = "transparent-text" name = "title" type="text" placeholder = "{{customer.personal_info.title}}">
                 </div>
 
                 </div>
                 <div class="col-3">
                     <div class="block">
                     <label for="">First Name</label>
-                    <input class = "transparent-text" type="text" value = "{{customer.personal_info.first_name}}">
+                    <input class = "transparent-text" type="text" name = "first_name" value = "{{customer.personal_info.first_name}}">
                 </div>
                 </div>
                 
                 <div class="col-3"> 
                     <div class="block">
                     <label for="">Middle Name</label>
-                    <input class = "transparent-text" type="text" value = "{{customer.personal_info.middle_name}}">
+                    <input class = "transparent-text" type="text" name = "middle_name" value = "{{customer.personal_info.middle_name}}">
                 </div>
                 </div>
                 <div class="col-3">
                     <div class="block">
                     <label for="">Last Name</label>
-                    <input class = "transparent-text" type="text" value = "{{customer.personal_info.last_name}}">
+                    <input class = "transparent-text" type="text" name = "last_name" value = "{{customer.personal_info.last_name}}">
                 </div>
                 </div>
             </div>
@@ -47,19 +48,19 @@
             <div class="col-3">
                 <div class="block">
                 <label for="">Previous Name</label>
-                <input class = "transparent-text" type="text" value = "{{customer.personal_info.pervious_names}}">
+                <input class = "transparent-text" type="text" name = "pervious_names" value = "{{customer.personal_info.pervious_names}}">
             </div>
             </div>
             <div class="col-3">
                 <div class="block">
                 <label for="">Mother's Name</label>
-                <input class = "transparent-text" type="text" value = "{{customer.personal_info.mother_name}}">
+                <input class = "transparent-text" type="text" name = "mother_name" value = "{{customer.personal_info.mother_name}}">
             </div>
             </div>
             <div class="col-3"> 
                 <div class="block">
                 <label for="">Father's Name</label>
-                <input class = "transparent-text" type="text" value = "{{customer.personal_info.father_names}}">
+                <input class = "transparent-text" type="text" name = "father_names" value = "{{customer.personal_info.father_names}}">
             </div>
             </div>
         </div>
@@ -68,25 +69,25 @@
             <div class="col-1">
                 <div class="block">
                 <label for="">Sex</label>
-                <input class = "transparent-text" type="text" value = "{{customer.personal_info.sex}}">
+                <input class = "transparent-text" type="text" name = "sex" value = "{{customer.personal_info.sex}}">
             </div>
             </div>
             <div class="col-3">
                 <div class="block">
                 <label for="">Date of Birth</label>
-                <input class = "transparent-text" type="text" value = "{{customer.personal_info.date_of_birth}}">
+                <input class = "transparent-text" type="text" name = "date_of_birth" value = "{{customer.personal_info.date_of_birth}}">
             </div>
             </div>
             <div class="col-3">
                 <div class="block">
                 <label for="">Place of Birth</label>
-                <input class = "transparent-text" type="text" value = "{{customer.personal_info.place_of_birth}}">
+                <input class = "transparent-text" type="text" name = "place_of_birth" value = "{{customer.personal_info.place_of_birth}}">
             </div>
             </div>
             <div class="col-3">
                 <div class="block">
                 <label for="">Citizenship</label>
-                <input class = "transparent-text" type="text" value = "{{customer.personal_info.citizenship}}">
+                <input class = "transparent-text" type="text" name = "citizenship" value = "{{customer.personal_info.citizenship}}">
             </div>
             </div>
         </div>
@@ -103,20 +104,20 @@
             <div class="col-6">
                 <div class="block">
                 <label for="">Street Address</label>
-                <input class = "transparent-text" type="text" value = "{{customer.contact_info.street_address}}">
+                <input class = "transparent-text" type="text" name = "street_address" value = "{{customer.contact_info.street_address}}">
             </div>
             </div>
             
             <div class="col-3"> 
                 <div class="block">
                 <label for="">City</label>
-                <input class = "transparent-text" type="text" value = "{{customer.contact_info.city}}">
+                <input class = "transparent-text" type="text" name = "city" value = "{{customer.contact_info.city}}">
             </div>
             </div>
             <div class="col-3">
                 <div class="block">
                 <label for="">Province</label>
-                <input class = "transparent-text" type="text" value = "{{customer.contact_info.province}}">
+                <input class = "transparent-text" type="text" name = "province" value = "{{customer.contact_info.province}}">
             </div>
             </div>
         </div>
@@ -126,13 +127,13 @@
         <div class="col-3">
             <div class="block">
             <label for="">Country</label>
-            <input class = "transparent-text" type="text" value = "{{customer.contact_info.country}}">
+            <input class = "transparent-text" type="text" name = "country" value = "{{customer.contact_info.country}}">
         </div>
         </div>
         <div class="col-3">
             <div class="block">
             <label for="">postal code</label>
-            <input class = "transparent-text" type="text" value = "{{customer.contact_info.postal_code}}">
+            <input class = "transparent-text" type="text" name = "postal_code" value = "{{customer.contact_info.postal_code}}">
         </div>
         </div>
        
@@ -142,8 +143,10 @@
 
 </div>
     
-    <input type="submit" value = "SAVE">
+    <input type="submit" class="button" value = "SAVE">
+  
 </form>
+
         <!-- <a href="{% url 'asset_list_view' user.id %}">View Assests</a>
          <a href="{% url 'checklist_item_list_view' user.id %}">View Check List</a>
          <a href="{% url 'create_checklist_item_status_list' user.id %}">Create Check List</a>

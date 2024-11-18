@@ -5,12 +5,12 @@
         <div class="nav-top-left"><img class="nav-img" src="{% static 'image/logo.png' %}" sizes="100 200" alt=""></div>
         <div class="nav-top-right">
 
-            <a href="http://">Help Center</a>
+            <a href="">Help Center</a>
 
             <div>
 
                 <select class="transparent-select" name="name" id="name">
-                    <option value="">Name DAVID MCGRUGER</option>
+                    <option value="">Name {{request.user.username}}</option>
                 </select>
 
             </div>
@@ -18,9 +18,9 @@
     </div>
     <div class="nav-mid">
         
-        <div class="nav-mid-item"><a href="">Estate : DAVID MCGRUGER <i class="fa fa-caret-down" style="font-size:14px;"></i> </a></div>
-        <div class="nav-mid-item"><a href="AddForm.html">Personal Details</a></div>
-        <div class="nav-mid-item"><a href="AddForm.html">Add Estate</a></div>
+        <div class="nav-mid-item"><a href="">Estate : {{user.username}} <i class="fa fa-caret-down" style="font-size:14px;"></i> </a></div>
+        <div class="nav-mid-item"><a href="{% url 'users_list_view' %}">User List View</a></div>
+        <div class="nav-mid-item"><a href="{% url 'logout' %}">Logout</a></div>
         
 
     </div>

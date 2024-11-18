@@ -35,7 +35,10 @@ INSTALLED_APPS = [
     'django_otp',
     'django_otp.plugins.otp_totp',
     'ContactManager',
-    'Base'
+    'Base',
+
+    # Third party
+    'corsheaders',
 ]
 
 AUTH_USER_MODEL = 'UserManagement.CustomUser'
@@ -48,8 +51,10 @@ MIDDLEWARE = [
     'django_otp.middleware.OTPMiddleware',  # Add this line
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
-
+CORS_ALLOW_ALL_ORIGINS = True
 ROOT_URLCONF = 'Estate.urls'
 
 TEMPLATES = [
@@ -134,10 +139,11 @@ SESSION_COOKIE_SAMESITE = 'Lax'
 CSRF_COOKIE_HTTPONLY = False
 SESSION_COOKIE_HTTPONLY = True
 
-# Add these settings for better security in production
-CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', 'http://127.0.0.1:8000']
+# # Add these settings for better security in production
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', 'http://127.0.0.1:8000' , 'https://72f3-103-212-153-13.ngrok-free.app']
 
 # For the success URL after login
 LOGIN_REDIRECT_URL = '/'  # Change this to your desired landing page
 LOGIN_URL = 'login'
 
+CORS_ALLOW_ALL_ORIGINS = True

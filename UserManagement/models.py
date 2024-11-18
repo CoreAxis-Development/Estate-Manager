@@ -67,10 +67,15 @@ class Customer(models.Model):
     
     def save(self,*args , **kwargs):
         self.user.role = CustomUser.RoleChoices.CUSTOMER
-        self.personal_info = PersonalInformation.objects.create()
-        self.contact_info = ContactInforMation.objects.create()
-        self.spouse_info = SpouseInformation.objects.create()
-        self.additional_info = AdditionalInformation.objects.create()
+        if self.pk is None:
+            self.personal_info = PersonalInformation.objects.create()
+            self.contact_info = ContactInforMation.objects.create()
+            self.spouse_info = SpouseInformation.objects.create()
+            self.additional_info = AdditionalInformation.objects.create()
+        self.personal_info.save()
+        self.contact_info.save()
+        self.spouse_info.save()
+        self.additional_info.save()
         self.user.save()
         return super().save(*args , **kwargs)
 

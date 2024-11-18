@@ -1,0 +1,30 @@
+{% load static %}
+<div class="navbar">
+        
+    <div class="nav-top">
+        <div class="nav-top-left"><img class="nav-img" src="{% static 'image/logo.png' %}" sizes="100 200" alt=""></div>
+        <div class="nav-top-right">
+
+            <a href="">Help Center</a>
+
+            <div>
+
+                <select class="transparent-select" name="name" id="name">
+                    <option value="">Name {{user.username}}</option>
+                </select>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-mid">
+        
+        <div class="nav-mid-item"><a href="">Welcome {{user.username}} <i class="fa fa-caret-down" style="font-size:14px;"></i> </a></div>
+        <div class="nav-mid-item"><a href="{% url 'users_list_view' %}">List View</a></div>
+        <div class="nav-mid-item"><a href="{% url 'logout' %}">Logout</a></div>
+        
+
+    </div>
+   
+  
+</div>

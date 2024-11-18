@@ -108,9 +108,11 @@ def customer_register_view(request):
 
 @login_required
 def home_view(request):
+    return redirect('users_list_view')
     return render(request, 'UserManagement/home.html', {
         'user': request.user,
     })
+
 @login_required
 @allowed_users(allowed_roles=[CustomUser.RoleChoices.EXECUTOR , CustomUser.RoleChoices.ADMIN])
 def users_list_view(request):
@@ -129,8 +131,30 @@ def customer_profile(request , pk):
 
     user = CustomUser.objects.get(id = pk)
     customer = Customer.objects.get(user = user)
+
     if request.method == 'POST':
-        customer.personal_info.first_name = request.POST
+        print( request.POST['first_name'])
+        customer.personal_info.title = request.POST['title']
+        customer.personal_info.first_name = request.POST['first_name']
+        customer.personal_info.middle_name = request.POST['middle_name']
+        customer.personal_info.last_name = request.POST['last_name']
+        customer.personal_info.pervious_names = request.POST['pervious_names']
+        customer.personal_info.mother_name = request.POST['mother_name']
+        customer.personal_info.father_names = request.POST['father_names']
+        customer.personal_info.place_of_birth = request.POST['place_of_birth']
+        customer.personal_info.date_of_birth = request.POST['date_of_birth']
+        customer.personal_info.citizenship = request.POST['citizenship']
+        customer.personal_info.sex = request.POST['sex']
+
+        customer.contact_info.street_address = request.POST['street_address']
+        customer.contact_info.city = request.POST['city']
+        customer.contact_info.province = request.POST['province']
+        customer.contact_info.country = request.POST['country']
+        customer.contact_info.postal_code = request.POST['postal_code']
+        
+        
+        customer.save()
+        return redirect('customer_profile' , pk)
     context = {'user': user , 'customer' : customer}
 
 
