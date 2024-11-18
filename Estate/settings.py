@@ -91,10 +91,10 @@ WSGI_APPLICATION = 'Estate.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST', 'db'),
+        'NAME': os.getenv('DB_NAME', 'estatemanagement'),
+        'USER': os.getenv('DB_USER', 'admin'),
+        'PASSWORD': os.getenv('DB_PASSWORD', '9yR4aSL9n2Qm1uw'),
+        'HOST': os.getenv('DB_HOST', 'rdsestatemanager.clck0wqus9h9.us-east-1.rds.amazonaws.com'),
         'PORT': os.getenv('DB_PORT', '3306'),
     }
 }
