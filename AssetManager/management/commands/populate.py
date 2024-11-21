@@ -1,5 +1,5 @@
 from AssetManager.models import AssetType , Asset , DebtType , Debt
-from UserManagement.models import CustomUser
+from UserManagement.models import CustomUser ,Customer , Staff
 from ContactManager.models import Contact , ContactType
 from CheckList.models import CheckListCategory , CheckListItem
 from faker import Faker
@@ -25,6 +25,14 @@ class Command(BaseCommand):
             if not CustomUser.objects.filter(username=user_data['username']).exists():
                 CustomUser.objects.create_user(**user_data)
         users = list(CustomUser.objects.all())
+
+        for user in users:
+            if user.role == CustomUser.RoleChoices.CUSTOMER:
+                Customer.objects.create(
+                    user = user
+                )
+                
+
 
         
         fake = Faker()

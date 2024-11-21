@@ -1,7 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect ,get_object_or_404
 from .models import CheckListItemStatus, CheckListItem, CheckListCategory
 from UserManagement.models import CustomUser
 from .helper import is_allowed_user
+from .forms import UpdateCheckListItemStatus
 
 
 def single_checlist_item_status_view(request, pk):
@@ -55,4 +56,16 @@ def create_checklist_item_status_list(request , user):
         temp = CheckListItemStatus.objects.create(user=user, item=item)
         temp.save()
     return redirect('checklist_item_list_view', user.id)
+
+def update_checklist_item(request , pk):
+    item = get_object_or_404(CheckListItemStatus, pk=pk)  # Fetch the record
+    if request.method == "POST":
+        form = UpdateCheckListItemStatus(request.POST, instance=item)  # Bind data to the form
+        if form.is_valid():
+            form.save()  # Save updated record
+            return redirect('checklist_item_list_view' , item.user.id)  # Redirect after successful update
+    else:
+        form = UpdateCheckListItemStatus(instance=item)  # Pre-fill form with existing data
+    return render(request, 'CheckList/update_checklist_items.html', {'form': form})
+    
    

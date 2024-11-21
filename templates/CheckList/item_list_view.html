@@ -12,7 +12,7 @@
     <table>
     <tr><th>Status</th><th>Task</th><th>Start Date</th><th>End Date</th><th>Assited By</th><th>Category</th><th>Deatil View</th><th>Update Status</th></tr>
     {% for item in items %}
-    <tr><td>{{item.status}}</td><td>{{item.item.title}}</td><td>{{item.item.start_date}}</td><td>{{item.item.end_date}}</td><td>{{item.item.assisted_by}}</td><td>{{item.item.category}}</td><td><a href="{% url 'single_checlist_item_status_view' item.item.id %}">Deatil View</a></td><td><a href="">Update Status</a></td></tr>
+    <tr><td>{{item.status}}</td><td>{{item.item.title}}</td><td>{{item.item.start_date}}</td><td>{{item.item.end_date}}</td><td>{{item.item.assisted_by}}</td><td>{{item.item.category}}</td><td><a href="{% url 'single_checlist_item_status_view' item.item.id %}">Deatil View</a></td><td><a href="{% url 'update_checklist_item' item.id %}">Update Status</a></td></tr>
         {% endfor %}
 </table>
           

@@ -13,3 +13,4 @@ def home_page(request):
 
 def unauth_error(request):
     return render(request , 'Base/unauth_error.html')
+
