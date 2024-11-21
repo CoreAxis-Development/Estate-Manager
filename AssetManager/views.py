@@ -2,8 +2,11 @@ from django.shortcuts import render , redirect
 from .models import Asset , Debt
 from .forms import AddAssetForm , AddDebtForm
 from UserManagement.models import CustomUser
+from UserManagement.decorators import allowed_users
+from django.contrib.auth.decorators import login_required
 # Create your views here.
-
+@login_required
+@allowed_users(allowed_roles=[CustomUser.RoleChoices.EXECUTOR , CustomUser.RoleChoices.ADMIN , CustomUser.RoleChoices.CUSTOMER])
 def asset_list_view(request , user):
     context = {}
     assets = Asset.objects.filter(user = user)
@@ -24,7 +27,8 @@ def asset_list_view(request , user):
 
     return render(request , "AssetManager/asset_list_view.html", context=context)
 
-
+@login_required
+@allowed_users(allowed_roles=[CustomUser.RoleChoices.EXECUTOR , CustomUser.RoleChoices.ADMIN , CustomUser.RoleChoices.CUSTOMER])
 def debt_list_view(request , user):
     context = {}
     debts = Debt.objects.filter(user = user)
@@ -44,7 +48,8 @@ def debt_list_view(request , user):
 
     return render(request , "AssetManager/debt_list_view.html", context=context)
 
-
+@login_required
+@allowed_users(allowed_roles=[CustomUser.RoleChoices.EXECUTOR , CustomUser.RoleChoices.ADMIN , CustomUser.RoleChoices.CUSTOMER])
 def collective_list_view(request , user):
     context = {}
     assets = Asset.objects.filter(user = user)

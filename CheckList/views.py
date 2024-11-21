@@ -3,8 +3,11 @@ from .models import CheckListItemStatus, CheckListItem, CheckListCategory
 from UserManagement.models import CustomUser
 from .helper import is_allowed_user
 from .forms import UpdateCheckListItemStatus
+from UserManagement.decorators import allowed_users
+from django.contrib.auth.decorators import login_required
 
-
+@login_required
+@allowed_users(allowed_roles=[CustomUser.RoleChoices.EXECUTOR , CustomUser.RoleChoices.ADMIN , CustomUser.RoleChoices.CUSTOMER])
 def single_checlist_item_status_view(request, pk):
     context = {}
     check_list_item = CheckListItemStatus.objects.get(id=pk)
@@ -32,13 +35,15 @@ def single_checlist_item_status_view(request, pk):
     else :
         return redirect('unauth_error')
 
-
+@login_required
 def checklist_item_list_view_self(request):
     context = {}
     items = CheckListItemStatus.objects.filter(user=request.user)
     context['items'] = items
     return render(request, "CheckList/item_list_view.html", context=context)
 
+@login_required
+@allowed_users(allowed_roles=[CustomUser.RoleChoices.EXECUTOR , CustomUser.RoleChoices.ADMIN , CustomUser.RoleChoices.CUSTOMER])
 def checklist_item_list_view(request, user):
     context = {}
     user = CustomUser.objects.get(id = user)
@@ -47,7 +52,8 @@ def checklist_item_list_view(request, user):
     context['user'] = user
     return render(request, "CheckList/item_list_view.html", context=context)
 
-
+@login_required
+@allowed_users(allowed_roles=[CustomUser.RoleChoices.EXECUTOR , CustomUser.RoleChoices.ADMIN , CustomUser.RoleChoices.CUSTOMER])
 def create_checklist_item_status_list(request , user):
    
     user = CustomUser.objects.get(id = user)
@@ -57,6 +63,8 @@ def create_checklist_item_status_list(request , user):
         temp.save()
     return redirect('checklist_item_list_view', user.id)
 
+@login_required
+@allowed_users(allowed_roles=[CustomUser.RoleChoices.EXECUTOR , CustomUser.RoleChoices.ADMIN , CustomUser.RoleChoices.CUSTOMER])
 def update_checklist_item(request , pk):
     item = get_object_or_404(CheckListItemStatus, pk=pk)  # Fetch the record
     if request.method == "POST":

@@ -2,9 +2,12 @@ from django.shortcuts import render , redirect , get_object_or_404
 from .models import Contact , ContactType
 from UserManagement.models import CustomUser
 from .forms import ContactSaveForm
+from UserManagement.decorators import allowed_users
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
-
+@login_required
+@allowed_users(allowed_roles=[CustomUser.RoleChoices.EXECUTOR , CustomUser.RoleChoices.ADMIN , CustomUser.RoleChoices.CUSTOMER])
 def contact_list_view(request , user):
     context = {}
     contacts = []
@@ -34,7 +37,8 @@ def contact_list_view(request , user):
 
     return render(request , 'ContactManager/list_view.html',context)
 
-
+@login_required
+@allowed_users(allowed_roles=[CustomUser.RoleChoices.EXECUTOR , CustomUser.RoleChoices.ADMIN , CustomUser.RoleChoices.CUSTOMER])
 def update_contact_view(request , pk):
     contact = get_object_or_404(Contact , id =  pk)
     if request.method == 'POST':
