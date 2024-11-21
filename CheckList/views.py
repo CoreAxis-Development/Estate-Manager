@@ -31,6 +31,7 @@ def single_checlist_item_status_view(request, pk):
         context['item'] = check_list_item
         context['nitem'] = next_item
         context['pitem'] = prev_item
+        context['user'] = check_list_item.user
         return render(request, 'CheckList/item_view.html', context=context)
     else :
         return redirect('unauth_error')
