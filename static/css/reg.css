@@ -1,0 +1,55 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+.register-card {
+    max-width: 450px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.register-card h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #343a40;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.btn-primary {
+    width: 100%;
+    background-color: #0069d9;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.text-muted {
+    text-align: center;
+    font-size: 14px;
+}
+
+.text-muted a {
+    color: #0069d9;
+    text-decoration: none;
+}
+
+.text-muted a:hover {
+    text-decoration: underline;
+}
+input{
+    border : 0;
+background-color: transparent;
+border-bottom: #d3e9e4 solid 1px ;
+}
