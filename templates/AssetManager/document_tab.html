@@ -1,0 +1,54 @@
+{% include 'Base/header.html' %}
+{% include 'Base/navbar.html' %}
+
+<div class="main-body">
+    <div class="sidebar">
+        <h2>Document List</h2>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <a href="#" onclick="showUploadForm()">Upload New Document</a>
+            </li>
+            {% for doc in documents %}
+                <li class="list-group-item">
+                    <a href="#" onclick="viewDocument('{{ doc.file.url }}')">{{ doc.doc_type.name }} - {{ doc.file.name }}</a>
+                </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+    <div class="content">
+        <div id="pdf-viewer" class="pdf-viewer" style="display: none;">
+            <div id="loading" class="loading">Loading...</div>
+            <iframe id="pdf-frame" src="" style="display: none;" width="100%" height="100%"></iframe>
+        </div>
+        <div id="upload-form" class="upload-form" style="display: none;">
+            <h2>Upload Document</h2>
+            <form method="post" enctype="multipart/form-data" class="form-group">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function viewDocument(url) {
+        document.getElementById('upload-form').style.display = 'none';
+        document.getElementById('pdf-viewer').style.display = 'block';
+        document.getElementById('loading').style.display = 'block';
+        document.getElementById('pdf-frame').style.display = 'none';
+        document.getElementById('pdf-frame').src = url;
+        document.getElementById('pdf-frame').onload = function() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('pdf-frame').style.display = 'block';
+        };
+    }
+
+    function showUploadForm() {
+        document.getElementById('pdf-viewer').style.display = 'none';
+        document.getElementById('upload-form').style.display = 'block';
+    }
+</script>
+
+{% include 'Base/footer.html' %}

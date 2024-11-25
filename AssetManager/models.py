@@ -48,6 +48,7 @@ class DocType(models.Model):
 
 class Doc(models.Model):
     doc_type = models.ForeignKey(DocType, on_delete=models.CASCADE)
-    url = models.CharField(max_length=255)
+    file = models.FileField(upload_to='documents/')
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)  # Add this line
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

@@ -42,6 +42,8 @@ class CheckListItemStatus(models.Model):
     def __str__(self) -> str:
         return f"{self.user} - {self.item.title}"
 
+
+
 # class CatalogueType(models.Model):
 #     name = models.CharField(max_length=100)
 
