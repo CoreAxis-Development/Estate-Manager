@@ -1,0 +1,9 @@
+<h1>Document List</h1>
+<ul class="list-group">
+    {% for doc in documents %}
+        <li class="list-group-item">
+            {{ doc.doc_type.name }} -
+            <a href="{{ doc.file.url }}">{{ doc.file.name }}</a>
+        </li>
+    {% endfor %}
+</ul>
