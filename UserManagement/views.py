@@ -10,6 +10,7 @@ from .forms import UserRegistrationForm, OTPVerificationForm
 from .models import CustomUser , Customer
 from .helper import is_valid_user
 from.decorators import allowed_users
+from django.core.mail import send_mail
 import random
 
 def login_view(request):
@@ -46,6 +47,14 @@ def login_view(request):
 def two_factor_authenticate(request):
     user_id = request.session.get('user_id')
     otp_code = request.session.get('otp_code')
+    subject = otp_code
+    message = f'Your otp for login is {otp_code}'
+    email_from = 'email@mail.com'
+    recipient_list = [request.user.email]
+    try:
+        send_mail(subject, message, email_from, recipient_list)
+    except Exception as e:
+        pass
     context = {'otp':otp_code}
 
     if request.method == 'POST':

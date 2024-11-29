@@ -1,4 +1,4 @@
-from django.shortcuts import render , redirect
+from django.shortcuts import render , redirect , get_object_or_404
 from .models import Asset , Debt
 from .forms import AddAssetForm , AddDebtForm
 from UserManagement.models import CustomUser
@@ -67,3 +67,20 @@ def collective_list_view(request , user):
     context['user'] = user
 
     return render(request,"AssetManager/collective_list_view.html",context = context)
+
+
+def update_asset(request, pk):
+    # Retrieve the Asset instance
+    asset = get_object_or_404(Asset, id=pk)
+    
+    if request.method == 'POST':
+        # Bind form with POST data and the existing instance
+        form = AddAssetForm(request.POST, instance=asset)
+        if form.is_valid():
+            form.save()  # Save the updated instance
+            return redirect('asset_list_view' , asset.user.id)  # Redirect to a success page
+    else:
+        # Initialize the form with the existing instance
+        form = AddAssetForm(instance=asset)
+    
+    return render(request, 'AssetManager/update_asset.html', {'form': form})
